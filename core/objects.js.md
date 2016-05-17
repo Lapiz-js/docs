@@ -1,6 +1,4 @@
-## core/objects.js
-
-[Home](index.md)
+## core/objects.js<a name="__top"></a><span style="float:right; font-size:60%">[Home](index.md)</sub>
 
 * [Lapiz.argDict](#Lapiz.argDict)
 * [Lapiz.on.class](#Lapiz.on.class)
@@ -20,7 +18,7 @@
       * [lapizObject.pub.on.delete](#lapizObject.pub.on.delete)
   * [lapizObject.setMany](#lapizObject.setMany)
 
-### <a name='Lapiz.argDict'></a>Lapiz.argDict
+### <a name='Lapiz.argDict'></a>Lapiz.argDict <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 Lapiz.argDict()
 ```
@@ -36,14 +34,14 @@ function foo(x,y,z){
 foo('do','re','mi'); // logs {'x':'do', 'y':'re', 'z':'mi'}
 ```
 
-### <a name='Lapiz.on.class'></a>Lapiz.on.class
+### <a name='Lapiz.on.class'></a>Lapiz.on.class <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 Lapiz.on.class(fn)
 Lapiz.on.class = fn
 ```
 Event registration, event will fire whenever a new Lapiz class is defined.
 
-### <a name='lapizClass'></a>lapizClass
+### <a name='lapizClass'></a>lapizClass <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 lapizClass = Lapiz.Class(constructor)
 lapizClass = Lapiz.Class(constructor, useCustom)
@@ -74,19 +72,19 @@ example above, returning the public namespace is a common technique.
 If the second argument is 'true', a Lapiz object will not be set to 'this',
 instead it will be set to what whatever the calling scope is.
 
-#### <a name='lapizClass.on'></a>lapizClass.on
+#### <a name='lapizClass.on'></a>lapizClass.on <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 lapizClass.on
 ```
 Namespace for class level events
 
-##### <a name='lapizClass.on.create'></a>lapizClass.on.create
+##### <a name='lapizClass.on.create'></a>lapizClass.on.create <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 lapizClass.on.create
 ```
 Registration for event that will fire everytime a new instance is created
 
-### <a name='lapizObject'></a>lapizObject
+### <a name='lapizObject'></a>lapizObject <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 lapizObject = Lapiz.Object();
 lapizObject = Lapiz.Object(constructor);
@@ -110,7 +108,7 @@ var obj2 = Lapiz.Object(function(){
 obj2.name = "test 2";
 ```
 
-#### <a name='lapizObject.attr'></a>lapizObject.attr
+#### <a name='lapizObject.attr'></a>lapizObject.attr <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 lapizObject.attr
 ```
@@ -127,7 +125,7 @@ obj.attr.name = "bar";
 console.log(obj.pub.name); // test
 ```
 
-#### <a name='lapizObject.event'></a>lapizObject.event
+#### <a name='lapizObject.event'></a>lapizObject.event <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 lapizObject.event(name)
 ```
@@ -140,25 +138,25 @@ obj.pub.on.foo = function(val){ console.log(val);};
 obj.fire.foo("bar"); // this will fire foo logging "bar" to the console
 ```
 
-#### <a name='lapizObject.fire'></a>lapizObject.fire
+#### <a name='lapizObject.fire'></a>lapizObject.fire <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 lapizObject.fire
 ```
 Namespace for event fire methods
 
-#### <a name='lapizObject.getter'></a>lapizObject.getter
+#### <a name='lapizObject.getter'></a>lapizObject.getter <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 lapizObject.getter(getterFn)
 ```
 Creates a getter property in the public namespace.
 
-#### <a name='lapizObject.method'></a>lapizObject.method
+#### <a name='lapizObject.method'></a>lapizObject.method <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 lapizObject.method(fn)
 ```
 Creates a method in the public namespace.
 
-#### <a name='lapizObject.properties'></a>lapizObject.properties
+#### <a name='lapizObject.properties'></a>lapizObject.properties <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 lapizObject.properties(properties)
 lapizObject.properties(properties, values)
@@ -194,33 +192,33 @@ var obj = Lapiz.Object(function(){
 });
 ```
 
-#### <a name='lapizObject.pub'></a>lapizObject.pub
+#### <a name='lapizObject.pub'></a>lapizObject.pub <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 lapizObject.pub
 ```
 The public namespace on the object
 
-##### <a name='lapizObject.pub.on'></a>lapizObject.pub.on
+##### <a name='lapizObject.pub.on'></a>lapizObject.pub.on <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 lapizObject.pub.on
 ```
 Namespace for event registrations
 
-###### <a name='lapizObject.pub.on.change'></a>lapizObject.pub.on.change
+###### <a name='lapizObject.pub.on.change'></a>lapizObject.pub.on.change <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 lapizObject.pub.on.change
 lapizObject.fire.change
 ```
 The change event will fire when ever a property is set.
 
-###### <a name='lapizObject.pub.on.delete'></a>lapizObject.pub.on.delete
+###### <a name='lapizObject.pub.on.delete'></a>lapizObject.pub.on.delete <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 lapizObject.pub.on.delete
 lapizObject.fire.delete
 ```
 The delete event should be fired if the object is going to be deleted.
 
-#### <a name='lapizObject.setMany'></a>lapizObject.setMany
+#### <a name='lapizObject.setMany'></a>lapizObject.setMany <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 lapizObject.setMany(collection)
 ```

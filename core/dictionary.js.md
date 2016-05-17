@@ -1,6 +1,4 @@
-## core/dictionary.js
-
-[Home](index.md)
+## core/dictionary.js<a name="__top"></a><span style="float:right; font-size:60%">[Home](index.md)</sub>
 
 * [Lapiz.Dictioanry](#Lapiz.Dictioanry)
 * [dict](#dict)
@@ -17,7 +15,7 @@
     * [dict.on.remove](#dict.on.remove)
   * [dict.remove](#dict.remove)
 
-### <a name='Lapiz.Dictioanry'></a>Lapiz.Dictioanry
+### <a name='Lapiz.Dictioanry'></a>Lapiz.Dictioanry <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 Lapiz.Dictioanry()
 Lapiz.Dictioanry(seed)
@@ -41,7 +39,7 @@ emptyDict(12, "zebra");
 console.log(emptyDict(12)); // apricot
 ```
 
-### <a name='dict'></a>dict
+### <a name='dict'></a>dict <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 dict(key)
 dict(key, val)
@@ -50,7 +48,7 @@ If only key is given, the value currently associated with that key will
 be returned. If key and val are both given, val is associated with key
 and the proper event (change or insert) will fire.
 
-#### <a name='dict.Accessor'></a>dict.Accessor
+#### <a name='dict.Accessor'></a>dict.Accessor <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 dict.Accessor
 dict.Accessor(key)
@@ -66,21 +64,21 @@ The accessor is a read-only iterface to the dictionary
 * accessor.Sort
 * accessor.Filter
 
-#### <a name='dict.Filter'></a>dict.Filter
+#### <a name='dict.Filter'></a>dict.Filter <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 dict.Filter(filterFunction)
 dict.Filter(attribute, val)
 ```
 Returns a Filter with the dictionary as the accessor
 
-#### <a name='dict.Sort'></a>dict.Sort
+#### <a name='dict.Sort'></a>dict.Sort <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 dict.Sort(sorterFunction)
 dict.Sort(attribute)
 ```
 Returns a Sorter with the dictionary as the accessor
 
-#### <a name='dict.each'></a>dict.each
+#### <a name='dict.each'></a>dict.each <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 dict.each(fn(key, val))
 ```
@@ -100,7 +98,7 @@ fruitDict(function(key, val){
 });
 ```
 
-#### <a name='dict.has'></a>dict.has
+#### <a name='dict.has'></a>dict.has <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 dict.has(key)
 ```
@@ -116,7 +114,7 @@ console.log(fruitDict.has("B")); // true
 console.log(fruitDict.has(12)); // false
 ```
 
-#### <a name='dict.keys'></a>dict.keys
+#### <a name='dict.keys'></a>dict.keys <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 dict.keys
 ```
@@ -130,7 +128,7 @@ var fruitDict = Lapiz.Dictionary({
 console.log(fruitDict.keys); // ["C", "A", "B"] in some order
 ```
 
-#### <a name='dict.length'></a>dict.length
+#### <a name='dict.length'></a>dict.length <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 dict.length
 ```
@@ -144,31 +142,31 @@ var fruitDict = Lapiz.Dictionary({
 console.log(fruitDict.length); // 3
 ```
 
-#### <a name='dict.on'></a>dict.on
+#### <a name='dict.on'></a>dict.on <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 dict.on
 ```
 Namespace for dictionary events
 
-##### <a name='dict.on.change'></a>dict.on.change
+##### <a name='dict.on.change'></a>dict.on.change <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 dict.on.change(fn(key, accessor))
 ```
 Event will fire when a new key has a new value associated with it
 
-##### <a name='dict.on.insert'></a>dict.on.insert
+##### <a name='dict.on.insert'></a>dict.on.insert <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 dict.on.insert(fn(key, accessor))
 ```
 Event will fire when a new key is added to the dictionary
 
-##### <a name='dict.on.remove'></a>dict.on.remove
+##### <a name='dict.on.remove'></a>dict.on.remove <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 dict.on.remove(fn(key, val, accessor))
 ```
 Event will fire when a key is removed.
 
-#### <a name='dict.remove'></a>dict.remove
+#### <a name='dict.remove'></a>dict.remove <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 dict.remove(key)
 ```

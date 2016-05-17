@@ -1,6 +1,4 @@
-## core/collectionsHelper.js
-
-[Home](index.md)
+## core/collectionsHelper.js<a name="__top"></a><span style="float:right; font-size:60%">[Home](index.md)</sub>
 
 * [Lapiz.ArrayConverter](#Lapiz.ArrayConverter)
 * [Lapiz.Map](#Lapiz.Map)
@@ -14,7 +12,7 @@
 * [Lapiz.each](#Lapiz.each)
 * [Lapiz.remove](#Lapiz.remove)
 
-### <a name='Lapiz.ArrayConverter'></a>Lapiz.ArrayConverter
+### <a name='Lapiz.ArrayConverter'></a>Lapiz.ArrayConverter <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 Lapiz.ArrayConverter(accessor)
 ```
@@ -24,7 +22,7 @@ results can be unpredictable. This primarily provided as a tool for
 interfacing with other libraries and frameworks. Use the accessor interface
 whenever possible.
 
-### <a name='Lapiz.Map'></a>Lapiz.Map
+### <a name='Lapiz.Map'></a>Lapiz.Map <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 Lapiz.Map()
 ```
@@ -36,7 +34,7 @@ Lapiz.Map also serves as a namespace for the following helper methods.
 They can be called on any object. They all use Object.defineProperty to
 create a proptery that cannot be overridden.
 
-#### <a name='Lapiz.Map.copyProps'></a>Lapiz.Map.copyProps
+#### <a name='Lapiz.Map.copyProps'></a>Lapiz.Map.copyProps <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 Lapiz.Map.copyProps(copyTo, copyFrom, props...)
 ```
@@ -54,7 +52,7 @@ B.y = "Test";
 console.log(A.y); // Test
 ```
 
-#### <a name='Lapiz.Map.getter'></a>Lapiz.Map.getter
+#### <a name='Lapiz.Map.getter'></a>Lapiz.Map.getter <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 Lapiz.Map.getter(object, namedGetterFunc)
 ```
@@ -71,7 +69,7 @@ console.log(x.foo); //0
 console.log(x.foo); //1
 ```
 
-#### <a name='Lapiz.Map.method'></a>Lapiz.Map.method
+#### <a name='Lapiz.Map.method'></a>Lapiz.Map.method <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 Lapiz.Map.method(obj, namedFunc)
 ```
@@ -82,13 +80,13 @@ Lapiz.Map.method(x, function foo(){...});
 x.foo(); //calls foo
 ```
 
-#### <a name='Lapiz.Map.prop'></a>Lapiz.Map.prop
+#### <a name='Lapiz.Map.prop'></a>Lapiz.Map.prop <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 Lapiz.Map.prop(obj, name, desc)
 ```
 Just a wrapper around Object.defineProperty
 
-#### <a name='Lapiz.Map.setterGetter'></a>Lapiz.Map.setterGetter
+#### <a name='Lapiz.Map.setterGetter'></a>Lapiz.Map.setterGetter <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 Lapiz.Map.setterGetter(obj, name, setterFunc, getterFunc)
 Lapiz.Map.setterGetter(obj, name, setterFunc)
@@ -122,7 +120,7 @@ console.log(x.foo); // value will still be 12
 
 ```
 
-#### <a name='Lapiz.Map.setterMethod'></a>Lapiz.Map.setterMethod
+#### <a name='Lapiz.Map.setterMethod'></a>Lapiz.Map.setterMethod <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 Lapiz.Map.setterMethod(obj, namedSetterFunc)
 ```
@@ -136,7 +134,7 @@ x.foo("bar");
 x.foo = "bar";
 ```
 
-### <a name='Lapiz.Namespace'></a>Lapiz.Namespace
+### <a name='Lapiz.Namespace'></a>Lapiz.Namespace <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 Lapiz.Namespace()
 Lapiz.Namespace(constructor)
@@ -177,7 +175,7 @@ x.sayHello("World"); // Hello, World
 * namespace.setterGetter(name, setter, getter)
 * namespace.setterGetter(name, setter)
 
-### <a name='Lapiz.each'></a>Lapiz.each
+### <a name='Lapiz.each'></a>Lapiz.each <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 Lapiz.each(collection, fn(key, val))
 ```
@@ -202,7 +200,7 @@ Lapiz.each(kv, function(key,val){
 });
 ```
 
-### <a name='Lapiz.remove'></a>Lapiz.remove
+### <a name='Lapiz.remove'></a>Lapiz.remove <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 Lapiz.remove(arr, el, start)
 Lapiz.remove(arr, el)

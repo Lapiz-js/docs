@@ -1,6 +1,4 @@
-## core/index.js
-
-[Home](index.md)
+## core/index.js<a name="__top"></a><span style="float:right; font-size:60%">[Home](index.md)</sub>
 
 * [Lapiz.Index](#Lapiz.Index)
 * [indexedClass.Filter](#indexedClass.Filter)
@@ -12,7 +10,7 @@
 * [indexedClass.keys](#indexedClass.keys)
 * [indexedClass.remove](#indexedClass.remove)
 
-### <a name='Lapiz.Index'></a>Lapiz.Index
+### <a name='Lapiz.Index'></a>Lapiz.Index <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 Lapiz.Index(lapizClass)
 Lapiz.Index(lapizClass, primaryFunc)
@@ -32,45 +30,45 @@ By default, the Index methods will be attached directly to the class. If
 this would cause a namespace collision, a string can be provided as a
 domain and all methods will be attached in that namespace.
 
-### <a name='indexedClass.Filter'></a>indexedClass.Filter
+### <a name='indexedClass.Filter'></a>indexedClass.Filter <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 indexedClass.Filter(filterFunc)
 indexedClass.Filter(filterField, val)
 ```
 
-### <a name='indexedClass.Sort'></a>indexedClass.Sort
+### <a name='indexedClass.Sort'></a>indexedClass.Sort <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 indexedClass.Sort(sortFunc)
 indexedClass.Sort(sortField)
 ```
 
-### <a name='indexedClass.all'></a>indexedClass.all
+### <a name='indexedClass.all'></a>indexedClass.all <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 indexedClass.all
 ```
 
-### <a name='indexedClass.each'></a>indexedClass.each
+### <a name='indexedClass.each'></a>indexedClass.each <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 indexedClass.each( function(key, val))
 ```
 
-### <a name='indexedClass.get'></a>indexedClass.get
+### <a name='indexedClass.get'></a>indexedClass.get <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 indexedClass.get(primaryKey)
 indexedClass.get(field, val)
 ```
 
-### <a name='indexedClass.has'></a>indexedClass.has
+### <a name='indexedClass.has'></a>indexedClass.has <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 indexedClass.has(key)
 ```
 
-### <a name='indexedClass.keys'></a>indexedClass.keys
+### <a name='indexedClass.keys'></a>indexedClass.keys <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 indexedClass.keys
 ```
 
-### <a name='indexedClass.remove'></a>indexedClass.remove
+### <a name='indexedClass.remove'></a>indexedClass.remove <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 indexedClass.remove(key)
 ```

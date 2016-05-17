@@ -1,6 +1,4 @@
-## core/init.js
-
-[Home](index.md)
+## core/init.js<a name="__top"></a><span style="float:right; font-size:60%">[Home](index.md)</sub>
 
 * [Lapiz.Module](#Lapiz.Module)
   * [Lapiz.Module.Loaded](#Lapiz.Module.Loaded)
@@ -12,7 +10,7 @@
   * [Lapiz.typeCheck.number](#Lapiz.typeCheck.number)
   * [Lapiz.typeCheck.string](#Lapiz.typeCheck.string)
 
-### <a name='Lapiz.Module'></a>Lapiz.Module
+### <a name='Lapiz.Module'></a>Lapiz.Module <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 Lapiz.Module(moduleName, moduleFunction(Lapiz))
 Lapiz.Module(moduleName, [dependencies...], moduleFunction(Lapiz))
@@ -26,19 +24,19 @@ Lapiz.Module("Foo", ["Events"], function($L){
 });
 ```
 
-#### <a name='Lapiz.Module.Loaded'></a>Lapiz.Module.Loaded
+#### <a name='Lapiz.Module.Loaded'></a>Lapiz.Module.Loaded <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 Lapiz.Module.Loaded()
 ```
 Returns all the modules that have been loaded
 
-### <a name='Lapiz.assert'></a>Lapiz.assert
+### <a name='Lapiz.assert'></a>Lapiz.assert <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 Lapiz.assert(bool, err)
 ```
 If bool evaluates to false, an error is thrown with err.
 
-### <a name='Lapiz.set'></a>Lapiz.set
+### <a name='Lapiz.set'></a>Lapiz.set <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 Lapiz.set(obj, name, value)
 ```
@@ -55,7 +53,7 @@ Lapiz.set(y, "foo", function{...});
 y.foo = 12; // this will not override the method
 ```
 
-### <a name='Lapiz.typeCheck'></a>Lapiz.typeCheck
+### <a name='Lapiz.typeCheck'></a>Lapiz.typeCheck <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 Lapiz.typeCheck(obj, type)
 Lapiz.typeCheck(obj, type, err)
@@ -71,7 +69,7 @@ Lapiz.typeCheck("test", Array); // false
 Lapiz.typeCheck([], "string", "Expected string"); // throws an error
 ```
 
-#### <a name='Lapiz.typeCheck.array'></a>Lapiz.typeCheck.array
+#### <a name='Lapiz.typeCheck.array'></a>Lapiz.typeCheck.array <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 Lapiz.typeCheck.array(obj)
 Lapiz.typeCheck.array(obj, err)
@@ -79,7 +77,7 @@ Lapiz.typeCheck.array(obj, err)
 Checks if the object is a array. If a string is supplied for err, it
 will throw err if obj is not an array.
 
-#### <a name='Lapiz.typeCheck.function'></a>Lapiz.typeCheck.function
+#### <a name='Lapiz.typeCheck.function'></a>Lapiz.typeCheck.function <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 Lapiz.typeCheck.function(obj)
 Lapiz.typeCheck.function(obj, err)
@@ -87,7 +85,7 @@ Lapiz.typeCheck.function(obj, err)
 Checks if the object is a function. If a string is supplied for err, it
 will throw err if obj is not a function.
 
-#### <a name='Lapiz.typeCheck.number'></a>Lapiz.typeCheck.number
+#### <a name='Lapiz.typeCheck.number'></a>Lapiz.typeCheck.number <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 Lapiz.typeCheck.number(obj)
 Lapiz.typeCheck.number(obj, err)
@@ -95,7 +93,7 @@ Lapiz.typeCheck.number(obj, err)
 Checks if the object is a number. If a string is supplied for err, it
 will throw err if obj is not an number.
 
-#### <a name='Lapiz.typeCheck.string'></a>Lapiz.typeCheck.string
+#### <a name='Lapiz.typeCheck.string'></a>Lapiz.typeCheck.string <span style="float:right; font-size:60%">[Top](#__top)</sub>
 ```javascript
 Lapiz.typeCheck.string(obj)
 Lapiz.typeCheck.string(obj, err)
