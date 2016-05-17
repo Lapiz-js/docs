@@ -12,7 +12,7 @@
   * [lapizObject.event](#lapizObject.event)
   * [lapizObject.fire](#lapizObject.fire)
   * [lapizObject.getter](#lapizObject.getter)
-  * [lapizObject.method](#lapizObject.method)
+  * [lapizObject.meth](#lapizObject.meth)
   * [lapizObject.properties](#lapizObject.properties)
   * [lapizObject.pub](#lapizObject.pub)
     * [lapizObject.pub.on](#lapizObject.pub.on)
@@ -172,9 +172,9 @@ Creates a getter property in the public namespace.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
-#### <a name='lapizObject.method'></a>lapizObject.method
+#### <a name='lapizObject.meth'></a>lapizObject.meth
 ```javascript
-lapizObject.method(fn)
+lapizObject.meth(fn)
 ```
 Creates a method in the public namespace.
 
@@ -279,7 +279,7 @@ var obj = Lapiz.Object(function(){
     "name": "string",
     "role": "string"
   });
-  this.method(this.setMany);
+  this.meth(this.setMany);
 }).pub;
 obj.setMany({
   "id":12,

@@ -8,7 +8,7 @@
 * [Lapiz.set](#Lapiz.set)
 * [Lapiz.typeCheck](#Lapiz.typeCheck)
   * [Lapiz.typeCheck.array](#Lapiz.typeCheck.array)
-  * [Lapiz.typeCheck.function](#Lapiz.typeCheck.function)
+  * [Lapiz.typeCheck.func](#Lapiz.typeCheck.func)
   * [Lapiz.typeCheck.number](#Lapiz.typeCheck.number)
   * [Lapiz.typeCheck.string](#Lapiz.typeCheck.string)
 
@@ -91,10 +91,10 @@ will throw err if obj is not an array.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
-#### <a name='Lapiz.typeCheck.function'></a>Lapiz.typeCheck.function
+#### <a name='Lapiz.typeCheck.func'></a>Lapiz.typeCheck.func
 ```javascript
-Lapiz.typeCheck.function(obj)
-Lapiz.typeCheck.function(obj, err)
+Lapiz.typeCheck.func(obj)
+Lapiz.typeCheck.func(obj, err)
 ```
 Checks if the object is a function. If a string is supplied for err, it
 will throw err if obj is not a function.

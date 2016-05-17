@@ -6,7 +6,7 @@
 * [Lapiz.Map](#Lapiz.Map)
   * [Lapiz.Map.copyProps](#Lapiz.Map.copyProps)
   * [Lapiz.Map.getter](#Lapiz.Map.getter)
-  * [Lapiz.Map.method](#Lapiz.Map.method)
+  * [Lapiz.Map.meth](#Lapiz.Map.meth)
   * [Lapiz.Map.prop](#Lapiz.Map.prop)
   * [Lapiz.Map.setterGetter](#Lapiz.Map.setterGetter)
   * [Lapiz.Map.setterMethod](#Lapiz.Map.setterMethod)
@@ -79,14 +79,14 @@ console.log(x.foo); //1
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
-#### <a name='Lapiz.Map.method'></a>Lapiz.Map.method
+#### <a name='Lapiz.Map.meth'></a>Lapiz.Map.meth
 ```javascript
-Lapiz.Map.method(obj, namedFunc)
+Lapiz.Map.meth(obj, namedFunc)
 ```
 Attaches a method to an object. The method must be a named function.
 ```javascript
 var x = Lapiz.Map();
-Lapiz.Map.method(x, function foo(){...});
+Lapiz.Map.meth(x, function foo(){...});
 x.foo(); //calls foo
 ```
 
@@ -143,7 +143,7 @@ Lapiz.Map.setterMethod(obj, namedSetterFunc)
 Attaches a setter method to an object. The method must be a named function.
 ```javascript
 var x = Lapiz.Map();
-Lapiz.Map.method(x, function foo(val){...});
+Lapiz.Map.meth(x, function foo(val){...});
 
 //these two calls are equivalent
 x.foo("bar");
@@ -166,7 +166,7 @@ is returned.
 ```javascript
 var x = Lapiz.Namespace();
 x.set("foo", "bar");
-x.method(function sayHello(name){
+x.meth(function sayHello(name){
   console.log("Hello, "+name);
 });
 console.log(x.namespace.foo); // bar
@@ -177,7 +177,7 @@ layer of the namespace and will return in the inner namespace.
 ```javascript
 var x = Lapiz.Namespace(function(){
   this.set("foo", "bar");
-  this.method(function sayHello(name){
+  this.meth(function sayHello(name){
     console.log("Hello, "+name);
   });
 });
@@ -187,7 +187,7 @@ x.sayHello("World"); // Hello, World
 ```
 * namespace.set(name, value)
 * namespace.prop(name, desc)
-* namespace.method(namedFunc)
+* namespace.meth(namedFunc)
 * namespace.setterMethod(namedSetterFunc)
 * namespace.getter(namedGetterFunc)
 * namespace.setterGetter(name, setter, getter)
