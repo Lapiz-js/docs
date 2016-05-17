@@ -1,17 +1,19 @@
 ## core/events.js
 
+[Home](index.md)
+
 * [Lapiz.Event](#Lapiz.Event)
-* [Lapiz.Event.linkProperty](#Lapiz.Event.linkProperty)
+  * [Lapiz.Event.linkProperty](#Lapiz.Event.linkProperty)
 * [Lapiz.SingleEvent](#Lapiz.SingleEvent)
 * [event.fire](#event.fire)
-* [event.fire.enabled](#event.fire.enabled)
-* [event.fire.length](#event.fire.length)
+  * [event.fire.enabled](#event.fire.enabled)
+  * [event.fire.length](#event.fire.length)
 * [event.register](#event.register)
-* [event.register.deregister](#event.register.deregister)
+  * [event.register.deregister](#event.register.deregister)
 * [singleEvent.fire](#singleEvent.fire)
-* [singleEvent.fire.enabled](#singleEvent.fire.enabled)
+  * [singleEvent.fire.enabled](#singleEvent.fire.enabled)
 * [singleEvent.register](#singleEvent.register)
-* [singleEvent.register.deregister](#singleEvent.register.deregister)
+  * [singleEvent.register.deregister](#singleEvent.register.deregister)
 
 ### <a name='Lapiz.Event'></a>Lapiz.Event
 ```javascript
@@ -31,7 +33,7 @@ e.register.deregister(fn2);
 e.fire("Test 2"); //will log "Test 2" to the console
 ```
 
-### <a name='Lapiz.Event.linkProperty'></a>Lapiz.Event.linkProperty
+#### <a name='Lapiz.Event.linkProperty'></a>Lapiz.Event.linkProperty
 ```javascript
 Lapiz.Event.linkProperty(obj, name, evt)
 ```
@@ -65,7 +67,7 @@ The event.fire method will call all functions that have been registered
 with the event. The arguments that are passed into fire will be passed
 into the registered functions.
 
-### <a name='event.fire.enabled'></a>event.fire.enabled
+#### <a name='event.fire.enabled'></a>event.fire.enabled
 ```javascript
 event.fire.enabled
 event.fire.enabled = x
@@ -74,7 +76,7 @@ The event.enabled is a boolean that can be set to enable or disable the
 fire method. If event.fire.enable is false, even if event.fire is called,
 it will not call the registered functions.
 
-### <a name='event.fire.length'></a>event.fire.length
+#### <a name='event.fire.length'></a>event.fire.length
 ```javascript
 event.fire.length
 ```
@@ -86,9 +88,10 @@ functions registered with the event.
 event.register(fn)
 event.register = fn
 ```
-The event.register method takes a function. All registered functions will be called when the event fires.
+The event.register method takes a function. All registered functions will
+be called when the event fires.
 
-### <a name='event.register.deregister'></a>event.register.deregister
+#### <a name='event.register.deregister'></a>event.register.deregister
 ```javascript
 event.register.deregister(fn)
 event.register.deregister = fn
@@ -101,7 +104,7 @@ has been registered with the event, it will be removed.
 singleEvent.fire
 ```
 
-### <a name='singleEvent.fire.enabled'></a>singleEvent.fire.enabled
+#### <a name='singleEvent.fire.enabled'></a>singleEvent.fire.enabled
 ```javascript
 singleEvent.fire.enabled
 ```
@@ -111,8 +114,7 @@ singleEvent.fire.enabled
 singleEvent.register
 ```
 
-### <a name='singleEvent.register.deregister'></a>singleEvent.register.deregister
+#### <a name='singleEvent.register.deregister'></a>singleEvent.register.deregister
 ```javascript
 singleEvent.register.deregister
 ```
-

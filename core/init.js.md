@@ -1,14 +1,16 @@
 ## core/init.js
 
+[Home](index.md)
+
 * [Lapiz.Module](#Lapiz.Module)
-* [Lapiz.Module.Loaded](#Lapiz.Module.Loaded)
+  * [Lapiz.Module.Loaded](#Lapiz.Module.Loaded)
 * [Lapiz.assert](#Lapiz.assert)
 * [Lapiz.set](#Lapiz.set)
 * [Lapiz.typeCheck](#Lapiz.typeCheck)
-* [Lapiz.typeCheck.array](#Lapiz.typeCheck.array)
-* [Lapiz.typeCheck.function](#Lapiz.typeCheck.function)
-* [Lapiz.typeCheck.number](#Lapiz.typeCheck.number)
-* [Lapiz.typeCheck.string](#Lapiz.typeCheck.string)
+  * [Lapiz.typeCheck.array](#Lapiz.typeCheck.array)
+  * [Lapiz.typeCheck.function](#Lapiz.typeCheck.function)
+  * [Lapiz.typeCheck.number](#Lapiz.typeCheck.number)
+  * [Lapiz.typeCheck.string](#Lapiz.typeCheck.string)
 
 ### <a name='Lapiz.Module'></a>Lapiz.Module
 ```javascript
@@ -24,7 +26,7 @@ Lapiz.Module("Foo", ["Events"], function($L){
 });
 ```
 
-### <a name='Lapiz.Module.Loaded'></a>Lapiz.Module.Loaded
+#### <a name='Lapiz.Module.Loaded'></a>Lapiz.Module.Loaded
 ```javascript
 Lapiz.Module.Loaded()
 ```
@@ -69,7 +71,7 @@ Lapiz.typeCheck("test", Array); // false
 Lapiz.typeCheck([], "string", "Expected string"); // throws an error
 ```
 
-### <a name='Lapiz.typeCheck.array'></a>Lapiz.typeCheck.array
+#### <a name='Lapiz.typeCheck.array'></a>Lapiz.typeCheck.array
 ```javascript
 Lapiz.typeCheck.array(obj)
 Lapiz.typeCheck.array(obj, err)
@@ -77,7 +79,7 @@ Lapiz.typeCheck.array(obj, err)
 Checks if the object is a array. If a string is supplied for err, it
 will throw err if obj is not an array.
 
-### <a name='Lapiz.typeCheck.function'></a>Lapiz.typeCheck.function
+#### <a name='Lapiz.typeCheck.function'></a>Lapiz.typeCheck.function
 ```javascript
 Lapiz.typeCheck.function(obj)
 Lapiz.typeCheck.function(obj, err)
@@ -85,7 +87,7 @@ Lapiz.typeCheck.function(obj, err)
 Checks if the object is a function. If a string is supplied for err, it
 will throw err if obj is not a function.
 
-### <a name='Lapiz.typeCheck.number'></a>Lapiz.typeCheck.number
+#### <a name='Lapiz.typeCheck.number'></a>Lapiz.typeCheck.number
 ```javascript
 Lapiz.typeCheck.number(obj)
 Lapiz.typeCheck.number(obj, err)
@@ -93,11 +95,10 @@ Lapiz.typeCheck.number(obj, err)
 Checks if the object is a number. If a string is supplied for err, it
 will throw err if obj is not an number.
 
-### <a name='Lapiz.typeCheck.string'></a>Lapiz.typeCheck.string
+#### <a name='Lapiz.typeCheck.string'></a>Lapiz.typeCheck.string
 ```javascript
 Lapiz.typeCheck.string(obj)
 Lapiz.typeCheck.string(obj, err)
 ```
 Checks if the object is a string. If a string is supplied for err, it
 will throw err if obj is not an string.
-

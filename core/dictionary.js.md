@@ -1,19 +1,21 @@
 ## core/dictionary.js
 
+[Home](index.md)
+
 * [Lapiz.Dictioanry](#Lapiz.Dictioanry)
 * [dict](#dict)
-* [dict.Accessor](#dict.Accessor)
-* [dict.Filter](#dict.Filter)
-* [dict.Sort](#dict.Sort)
-* [dict.each](#dict.each)
-* [dict.has](#dict.has)
-* [dict.keys](#dict.keys)
-* [dict.length](#dict.length)
-* [dict.on](#dict.on)
-* [dict.on.change](#dict.on.change)
-* [dict.on.insert](#dict.on.insert)
-* [dict.on.remove](#dict.on.remove)
-* [dict.remove](#dict.remove)
+  * [dict.Accessor](#dict.Accessor)
+  * [dict.Filter](#dict.Filter)
+  * [dict.Sort](#dict.Sort)
+  * [dict.each](#dict.each)
+  * [dict.has](#dict.has)
+  * [dict.keys](#dict.keys)
+  * [dict.length](#dict.length)
+  * [dict.on](#dict.on)
+    * [dict.on.change](#dict.on.change)
+    * [dict.on.insert](#dict.on.insert)
+    * [dict.on.remove](#dict.on.remove)
+  * [dict.remove](#dict.remove)
 
 ### <a name='Lapiz.Dictioanry'></a>Lapiz.Dictioanry
 ```javascript
@@ -48,7 +50,7 @@ If only key is given, the value currently associated with that key will
 be returned. If key and val are both given, val is associated with key
 and the proper event (change or insert) will fire.
 
-### <a name='dict.Accessor'></a>dict.Accessor
+#### <a name='dict.Accessor'></a>dict.Accessor
 ```javascript
 dict.Accessor
 dict.Accessor(key)
@@ -64,21 +66,21 @@ The accessor is a read-only iterface to the dictionary
 * accessor.Sort
 * accessor.Filter
 
-### <a name='dict.Filter'></a>dict.Filter
+#### <a name='dict.Filter'></a>dict.Filter
 ```javascript
 dict.Filter(filterFunction)
 dict.Filter(attribute, val)
 ```
 Returns a Filter with the dictionary as the accessor
 
-### <a name='dict.Sort'></a>dict.Sort
+#### <a name='dict.Sort'></a>dict.Sort
 ```javascript
 dict.Sort(sorterFunction)
 dict.Sort(attribute)
 ```
 Returns a Sorter with the dictionary as the accessor
 
-### <a name='dict.each'></a>dict.each
+#### <a name='dict.each'></a>dict.each
 ```javascript
 dict.each(fn(key, val))
 ```
@@ -98,7 +100,7 @@ fruitDict(function(key, val){
 });
 ```
 
-### <a name='dict.has'></a>dict.has
+#### <a name='dict.has'></a>dict.has
 ```javascript
 dict.has(key)
 ```
@@ -114,7 +116,7 @@ console.log(fruitDict.has("B")); // true
 console.log(fruitDict.has(12)); // false
 ```
 
-### <a name='dict.keys'></a>dict.keys
+#### <a name='dict.keys'></a>dict.keys
 ```javascript
 dict.keys
 ```
@@ -128,7 +130,7 @@ var fruitDict = Lapiz.Dictionary({
 console.log(fruitDict.keys); // ["C", "A", "B"] in some order
 ```
 
-### <a name='dict.length'></a>dict.length
+#### <a name='dict.length'></a>dict.length
 ```javascript
 dict.length
 ```
@@ -142,31 +144,31 @@ var fruitDict = Lapiz.Dictionary({
 console.log(fruitDict.length); // 3
 ```
 
-### <a name='dict.on'></a>dict.on
+#### <a name='dict.on'></a>dict.on
 ```javascript
 dict.on
 ```
 Namespace for dictionary events
 
-### <a name='dict.on.change'></a>dict.on.change
+##### <a name='dict.on.change'></a>dict.on.change
 ```javascript
 dict.on.change(fn(key, accessor))
 ```
 Event will fire when a new key has a new value associated with it
 
-### <a name='dict.on.insert'></a>dict.on.insert
+##### <a name='dict.on.insert'></a>dict.on.insert
 ```javascript
 dict.on.insert(fn(key, accessor))
 ```
 Event will fire when a new key is added to the dictionary
 
-### <a name='dict.on.remove'></a>dict.on.remove
+##### <a name='dict.on.remove'></a>dict.on.remove
 ```javascript
 dict.on.remove(fn(key, val, accessor))
 ```
 Event will fire when a key is removed.
 
-### <a name='dict.remove'></a>dict.remove
+#### <a name='dict.remove'></a>dict.remove
 ```javascript
 dict.remove(key)
 ```
@@ -182,4 +184,3 @@ fruitDict.remove("B");
 console.log(fruitDict.length); // 2
 console.log(fruitDict("B")); // undefined
 ```
-

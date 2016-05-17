@@ -1,11 +1,13 @@
 ## core/parser.js
 
+[Home](index.md)
+
 * [Lapiz.parse](#Lapiz.parse)
-* [Lapiz.parse.array](#Lapiz.parse.array)
-* [Lapiz.parse.bool](#Lapiz.parse.bool)
-* [Lapiz.parse.int](#Lapiz.parse.int)
-* [Lapiz.parse.number](#Lapiz.parse.number)
-* [Lapiz.parse.string](#Lapiz.parse.string)
+  * [Lapiz.parse.array](#Lapiz.parse.array)
+  * [Lapiz.parse.bool](#Lapiz.parse.bool)
+  * [Lapiz.parse.int](#Lapiz.parse.int)
+  * [Lapiz.parse.number](#Lapiz.parse.number)
+  * [Lapiz.parse.string](#Lapiz.parse.string)
 
 ### <a name='Lapiz.parse'></a>Lapiz.parse
 ```javascript
@@ -15,7 +17,7 @@ Namespace for parser methods. This namespace is left open
 so that it can be extended, particularly for use with defining
 object properties.
 
-### <a name='Lapiz.parse.array'></a>Lapiz.parse.array
+#### <a name='Lapiz.parse.array'></a>Lapiz.parse.array
 ```javascript
 Lapiz.parse.array(parser)
 ```
@@ -27,13 +29,13 @@ console.log(arrIntParser([3.14, "12.34", true]); // [3, 12, 1]
 console.log(arrIntParser("22.22"); // [22]
 ```
 
-### <a name='Lapiz.parse.bool'></a>Lapiz.parse.bool
+#### <a name='Lapiz.parse.bool'></a>Lapiz.parse.bool
 ```javascript
 Lapiz.parse.bool(val)
 ```
 Converts val to a bool
 
-### <a name='Lapiz.parse.int'></a>Lapiz.parse.int
+#### <a name='Lapiz.parse.int'></a>Lapiz.parse.int
 ```javascript
 Lapiz.parse.int(val)
 Lapiz.parse.int(val, rad)
@@ -42,13 +44,13 @@ If rad is not defined it will default to 10. This is mostly a wrapper
 around parseInt, however if val is a boolean it will reurn eitehr 1
 or 0.
 
-### <a name='Lapiz.parse.number'></a>Lapiz.parse.number
+#### <a name='Lapiz.parse.number'></a>Lapiz.parse.number
 ```javascript
 Lapiz.parse.number(val)
 ```
 Converts val to a number. This is a wrapper around parseFloat.
 
-### <a name='Lapiz.parse.string'></a>Lapiz.parse.string
+#### <a name='Lapiz.parse.string'></a>Lapiz.parse.string
 ```javascript
 Lapiz.parse.string
 ```
@@ -58,4 +60,3 @@ to a string. If val is an object that has a .str() method,
 that will be used, if it doesn't have .str but it does have
 .toString, that will be used. As a last resort it will be
 concatted with an empty string.
-

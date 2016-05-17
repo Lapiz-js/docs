@@ -1,13 +1,15 @@
 ## core/collectionsHelper.js
 
+[Home](index.md)
+
 * [Lapiz.ArrayConverter](#Lapiz.ArrayConverter)
 * [Lapiz.Map](#Lapiz.Map)
-* [Lapiz.Map.copyProps](#Lapiz.Map.copyProps)
-* [Lapiz.Map.getter](#Lapiz.Map.getter)
-* [Lapiz.Map.method](#Lapiz.Map.method)
-* [Lapiz.Map.prop](#Lapiz.Map.prop)
-* [Lapiz.Map.setterGetter](#Lapiz.Map.setterGetter)
-* [Lapiz.Map.setterMethod](#Lapiz.Map.setterMethod)
+  * [Lapiz.Map.copyProps](#Lapiz.Map.copyProps)
+  * [Lapiz.Map.getter](#Lapiz.Map.getter)
+  * [Lapiz.Map.method](#Lapiz.Map.method)
+  * [Lapiz.Map.prop](#Lapiz.Map.prop)
+  * [Lapiz.Map.setterGetter](#Lapiz.Map.setterGetter)
+  * [Lapiz.Map.setterMethod](#Lapiz.Map.setterMethod)
 * [Lapiz.Namespace](#Lapiz.Namespace)
 * [Lapiz.each](#Lapiz.each)
 * [Lapiz.remove](#Lapiz.remove)
@@ -34,7 +36,7 @@ Lapiz.Map also serves as a namespace for the following helper methods.
 They can be called on any object. They all use Object.defineProperty to
 create a proptery that cannot be overridden.
 
-### <a name='Lapiz.Map.copyProps'></a>Lapiz.Map.copyProps
+#### <a name='Lapiz.Map.copyProps'></a>Lapiz.Map.copyProps
 ```javascript
 Lapiz.Map.copyProps(copyTo, copyFrom, props...)
 ```
@@ -52,7 +54,7 @@ B.y = "Test";
 console.log(A.y); // Test
 ```
 
-### <a name='Lapiz.Map.getter'></a>Lapiz.Map.getter
+#### <a name='Lapiz.Map.getter'></a>Lapiz.Map.getter
 ```javascript
 Lapiz.Map.getter(object, namedGetterFunc)
 ```
@@ -69,7 +71,7 @@ console.log(x.foo); //0
 console.log(x.foo); //1
 ```
 
-### <a name='Lapiz.Map.method'></a>Lapiz.Map.method
+#### <a name='Lapiz.Map.method'></a>Lapiz.Map.method
 ```javascript
 Lapiz.Map.method(obj, namedFunc)
 ```
@@ -80,13 +82,13 @@ Lapiz.Map.method(x, function foo(){...});
 x.foo(); //calls foo
 ```
 
-### <a name='Lapiz.Map.prop'></a>Lapiz.Map.prop
+#### <a name='Lapiz.Map.prop'></a>Lapiz.Map.prop
 ```javascript
 Lapiz.Map.prop(obj, name, desc)
 ```
 Just a wrapper around Object.defineProperty
 
-### <a name='Lapiz.Map.setterGetter'></a>Lapiz.Map.setterGetter
+#### <a name='Lapiz.Map.setterGetter'></a>Lapiz.Map.setterGetter
 ```javascript
 Lapiz.Map.setterGetter(obj, name, setterFunc, getterFunc)
 Lapiz.Map.setterGetter(obj, name, setterFunc)
@@ -120,7 +122,7 @@ console.log(x.foo); // value will still be 12
 
 ```
 
-### <a name='Lapiz.Map.setterMethod'></a>Lapiz.Map.setterMethod
+#### <a name='Lapiz.Map.setterMethod'></a>Lapiz.Map.setterMethod
 ```javascript
 Lapiz.Map.setterMethod(obj, namedSetterFunc)
 ```
@@ -213,4 +215,3 @@ var arr = [3,1,4,1,5,9];
 Lapiz.remove(arr,1);
 console.log(arr); //[3,4,1,5,9]
 ```
-

@@ -1,25 +1,52 @@
 ## core/objects.js
 
-* [Lapiz.Class](#Lapiz.Class)
-* [Lapiz.Object](#Lapiz.Object)
+[Home](index.md)
+
 * [Lapiz.argDict](#Lapiz.argDict)
 * [Lapiz.on.class](#Lapiz.on.class)
-* [object.attr](#object.attr)
-* [object.event](#object.event)
-* [object.fire](#object.fire)
-* [object.getter](#object.getter)
-* [object.method](#object.method)
-* [object.properties](#object.properties)
-* [object.pub](#object.pub)
-* [object.pub.on](#object.pub.on)
-* [object.pub.on.change](#object.pub.on.change)
-* [object.pub.on.delete](#object.pub.on.delete)
-* [object.setMany](#object.setMany)
+* [lapizClass](#lapizClass)
+  * [lapizClass.on](#lapizClass.on)
+    * [lapizClass.on.create](#lapizClass.on.create)
+* [lapizObject](#lapizObject)
+  * [lapizObject.attr](#lapizObject.attr)
+  * [lapizObject.event](#lapizObject.event)
+  * [lapizObject.fire](#lapizObject.fire)
+  * [lapizObject.getter](#lapizObject.getter)
+  * [lapizObject.method](#lapizObject.method)
+  * [lapizObject.properties](#lapizObject.properties)
+  * [lapizObject.pub](#lapizObject.pub)
+    * [lapizObject.pub.on](#lapizObject.pub.on)
+      * [lapizObject.pub.on.change](#lapizObject.pub.on.change)
+      * [lapizObject.pub.on.delete](#lapizObject.pub.on.delete)
+  * [lapizObject.setMany](#lapizObject.setMany)
 
-### <a name='Lapiz.Class'></a>Lapiz.Class
+### <a name='Lapiz.argDict'></a>Lapiz.argDict
 ```javascript
-Lapiz.Class(constructor)
-Lapiz.Class(constructor, useCustom)
+Lapiz.argDict()
+```
+This is one of the few "magic methods" in Lapiz. When called from within a
+function, it returns the arguments names and values as a key/value object.
+The name is a little misleading, the result is a JavaScript object, not a
+Lapiz.Dictionary.
+```javascript
+function foo(x,y,z){
+  var args = Lapiz.argDict();
+  console.log(args);
+}
+foo('do','re','mi'); // logs {'x':'do', 'y':'re', 'z':'mi'}
+```
+
+### <a name='Lapiz.on.class'></a>Lapiz.on.class
+```javascript
+Lapiz.on.class(fn)
+Lapiz.on.class = fn
+```
+Event registration, event will fire whenever a new Lapiz class is defined.
+
+### <a name='lapizClass'></a>lapizClass
+```javascript
+lapizClass = Lapiz.Class(constructor)
+lapizClass = Lapiz.Class(constructor, useCustom)
 ```
 Used to define a class. Lapiz.on.class will fire everytime a new class
 is created. The returned constructor will also have an on.create method
@@ -47,14 +74,26 @@ example above, returning the public namespace is a common technique.
 If the second argument is 'true', a Lapiz object will not be set to 'this',
 instead it will be set to what whatever the calling scope is.
 
-### <a name='Lapiz.Object'></a>Lapiz.Object
+#### <a name='lapizClass.on'></a>lapizClass.on
 ```javascript
-Lapiz.Object();
-Lapiz.Object(constructor);
+lapizClass.on
+```
+Namespace for class level events
+
+##### <a name='lapizClass.on.create'></a>lapizClass.on.create
+```javascript
+lapizClass.on.create
+```
+Registration for event that will fire everytime a new instance is created
+
+### <a name='lapizObject'></a>lapizObject
+```javascript
+lapizObject = Lapiz.Object();
+lapizObject = Lapiz.Object(constructor);
 ```
 Creates a Lapiz Object, a structure per-wired for adding events, properties
-and methods. If a constructor is supplied, it will be invoked with 'this' set
-to the object.
+and methods. If a constructor is supplied, it will be invoked with 'this'
+set to the object.
 ```javascript
 var obj = Lapiz.Object();
 obj.properties({
@@ -71,32 +110,9 @@ var obj2 = Lapiz.Object(function(){
 obj2.name = "test 2";
 ```
 
-### <a name='Lapiz.argDict'></a>Lapiz.argDict
+#### <a name='lapizObject.attr'></a>lapizObject.attr
 ```javascript
-Lapiz.argDict()
-```
-This is one of the few "magic methods" in Lapiz. When called from within a
-function, it returns the arguments names and values as a key/value object.
-The name is a little misleading, the result is a JavaScript object, not a
-Lapiz.Dictionary.
-```javascript
-function foo(x,y,z){
-  var args = Lapiz.argDict();
-  console.log(args);
-}
-foo('do','re','mi'); // logs {'x':'do', 'y':'re', 'z':'mi'}
-```
-
-### <a name='Lapiz.on.class'></a>Lapiz.on.class
-```javascript
-Lapiz.on.class(fn)
-Lapiz.on.class = fn
-```
-Event registration, event will fire whenever a new Lapiz class is defined.
-
-### <a name='object.attr'></a>object.attr
-```javascript
-object.attr
+lapizObject.attr
 ```
 Namespace for attribute values
 ```javascript
@@ -111,9 +127,9 @@ obj.attr.name = "bar";
 console.log(obj.pub.name); // test
 ```
 
-### <a name='object.event'></a>object.event
+#### <a name='lapizObject.event'></a>lapizObject.event
 ```javascript
-object.event(name)
+lapizObject.event(name)
 ```
 Creates an event and places the registration method in object.pub.on and
 the fire method in object.fire
@@ -124,37 +140,37 @@ obj.pub.on.foo = function(val){ console.log(val);};
 obj.fire.foo("bar"); // this will fire foo logging "bar" to the console
 ```
 
-### <a name='object.fire'></a>object.fire
+#### <a name='lapizObject.fire'></a>lapizObject.fire
 ```javascript
-object.fire
+lapizObject.fire
 ```
 Namespace for event fire methods
 
-### <a name='object.getter'></a>object.getter
+#### <a name='lapizObject.getter'></a>lapizObject.getter
 ```javascript
-object.getter(getterFn)
+lapizObject.getter(getterFn)
 ```
 Creates a getter property in the public namespace.
 
-### <a name='object.method'></a>object.method
+#### <a name='lapizObject.method'></a>lapizObject.method
 ```javascript
-object.method(fn)
+lapizObject.method(fn)
 ```
 Creates a method in the public namespace.
 
-### <a name='object.properties'></a>object.properties
+#### <a name='lapizObject.properties'></a>lapizObject.properties
 ```javascript
-object.properties(properties)
-object.properties(properties, values)
+lapizObject.properties(properties)
+lapizObject.properties(properties, values)
 ```
-The properties method is used to attach getter/setter properties to the public
-namespace. The attribute that underlies the getter/setter will be attached to
-object.attr.
+The properties method is used to attach getter/setter properties to the
+public namespace. The attribute that underlies the getter/setter will be
+attached to object.attr.
 
-If a setter is defined and no getter is defined, a getter will be generated
-that returns the attribute value. If a function is given, that will be used as
-the setter, if a string is provided, that will be used to get a setter from
-Lapiz.parse.
+If a setter is defined and no getter is defined, a getter will be
+generated that returns the attribute value. If a function is given, that
+will be used as the setter, if a string is provided, that will be used to
+get a setter from Lapiz.parse.
 ```javascript
 var obj = Lapiz.Object(function(){
   var self = this;
@@ -178,35 +194,35 @@ var obj = Lapiz.Object(function(){
 });
 ```
 
-### <a name='object.pub'></a>object.pub
+#### <a name='lapizObject.pub'></a>lapizObject.pub
 ```javascript
-object.pub
+lapizObject.pub
 ```
 The public namespace on the object
 
-### <a name='object.pub.on'></a>object.pub.on
+##### <a name='lapizObject.pub.on'></a>lapizObject.pub.on
 ```javascript
-object.pub.on
+lapizObject.pub.on
 ```
 Namespace for event registrations
 
-### <a name='object.pub.on.change'></a>object.pub.on.change
+###### <a name='lapizObject.pub.on.change'></a>lapizObject.pub.on.change
 ```javascript
-object.pub.on.change
-object.fire.change
+lapizObject.pub.on.change
+lapizObject.fire.change
 ```
 The change event will fire when ever a property is set.
 
-### <a name='object.pub.on.delete'></a>object.pub.on.delete
+###### <a name='lapizObject.pub.on.delete'></a>lapizObject.pub.on.delete
 ```javascript
-object.pub.on.delete
-object.fire.delete
+lapizObject.pub.on.delete
+lapizObject.fire.delete
 ```
 The delete event should be fired if the object is going to be deleted.
 
-### <a name='object.setMany'></a>object.setMany
+#### <a name='lapizObject.setMany'></a>lapizObject.setMany
 ```javascript
-object.setMany(collection)
+lapizObject.setMany(collection)
 ```
 Takes a key/value collection (generally a JavaScript object) and sets
 any properties that match the keys.
@@ -238,4 +254,3 @@ obj.setMany({
   "role": "admin"
 });
 ```
-
