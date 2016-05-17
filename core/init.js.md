@@ -9,6 +9,7 @@
 * [Lapiz.typeCheck.function](#Lapiz.typeCheck.function)
 * [Lapiz.typeCheck.number](#Lapiz.typeCheck.number)
 * [Lapiz.typeCheck.string](#Lapiz.typeCheck.string)
+
 ### <a name='Lapiz.Module'></a>Lapiz.Module
 ```javascript
 Lapiz.Module(moduleName, moduleFunction(Lapiz))

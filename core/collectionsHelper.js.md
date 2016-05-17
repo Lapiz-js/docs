@@ -11,6 +11,7 @@
 * [Lapiz.Namespace](#Lapiz.Namespace)
 * [Lapiz.each](#Lapiz.each)
 * [Lapiz.remove](#Lapiz.remove)
+
 ### <a name='Lapiz.ArrayConverter'></a>Lapiz.ArrayConverter
 ```javascript
 Lapiz.ArrayConverter(accessor)

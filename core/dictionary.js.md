@@ -14,6 +14,7 @@
 * [dict.on.insert](#dict.on.insert)
 * [dict.on.remove](#dict.on.remove)
 * [dict.remove](#dict.remove)
+
 ### <a name='Lapiz.Dictioanry'></a>Lapiz.Dictioanry
 ```javascript
 Lapiz.Dictioanry()

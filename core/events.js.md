@@ -12,6 +12,7 @@
 * [singleEvent.fire.enabled](#singleEvent.fire.enabled)
 * [singleEvent.register](#singleEvent.register)
 * [singleEvent.register.deregister](#singleEvent.register.deregister)
+
 ### <a name='Lapiz.Event'></a>Lapiz.Event
 ```javascript
 Lapiz.Event()
