@@ -1,3 +1,6 @@
-## Index of components/ui/
-* [components/ui/ui.js](ui.js.md)
-* [components/ui/uiHelpers.js](uiHelpers.js.md)
+## Index of lapiz/components/ui/
+
+<sub><sup>[Back](../index.md)</sup></sub>
+
+* [ui.js](ui.js.md)
+* [uiHelpers.js](uiHelpers.js.md)

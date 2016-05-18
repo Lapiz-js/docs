@@ -1,2 +1,5 @@
-## Index of components/ajax/
-* [components/ajax/ajax.js](ajax.js.md)
+## Index of lapiz/components/ajax/
+
+<sub><sup>[Back](../index.md)</sup></sub>
+
+* [ajax.js](ajax.js.md)
