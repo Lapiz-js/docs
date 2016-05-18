@@ -1,5 +1,2 @@
-## Index of lapiz/components/validator/
-
-<sub><sup>[Back](../index.md)</sup></sub>
-
-* [validator.js](validator.js.md)
+## Index of components/validator/
+* [components/validator/validator.js](validator.js.md)
