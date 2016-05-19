@@ -30,7 +30,7 @@ Lapiz.Module("Foo", ["Events"], function($L){
 
 #### <a name='Lapiz.Module.Loaded'></a>Lapiz.Module.Loaded
 ```javascript
-Lapiz.Module.Loaded()
+Lapiz.Module.Loaded
 ```
 Returns all the modules that have been loaded
 
