@@ -11,7 +11,7 @@
   * [Lapiz.UI.mediator](#Lapiz.UI.mediator)
     * [Lapiz.UI.mediator.mediatorName](#Lapiz.UI.mediator.mediatorName)
   * [Lapiz.UI.render](#Lapiz.UI.render)
-* [attribute:resolver](#attribute:resolver)
+* [attribute:resolver](#attribute_resolver)
 * [l-view](#l-view)
 
 ### <a name='Lapiz.UI'></a>Lapiz.UI
@@ -85,7 +85,7 @@ Lapiz.UI.render(renderString..., ctx);
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
-### <a name='attribute:resolver'></a>attribute:resolver
+### <a name='attribute_resolver'></a>attribute:resolver
 ```javascript
 attribute:resolver
 ```
@@ -98,7 +98,7 @@ l-view
 ```
 Used to create a lapiz view:
 ```javascript
-<htmlNode l-view="viewName>...</htmlNode>
+<htmlNode l-view="viewName">...</htmlNode>
 ```
 All nodes in the document with this attribute will be cloned and saved and
 the original will be removed from the document.
