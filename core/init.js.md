@@ -9,6 +9,7 @@
 * [Lapiz.typeCheck](#Lapiz.typeCheck)
   * [Lapiz.typeCheck.array](#Lapiz.typeCheck.array)
   * [Lapiz.typeCheck.func](#Lapiz.typeCheck.func)
+  * [Lapiz.typeCheck.nested](#Lapiz.typeCheck.nested)
   * [Lapiz.typeCheck.number](#Lapiz.typeCheck.number)
   * [Lapiz.typeCheck.string](#Lapiz.typeCheck.string)
 
@@ -98,6 +99,23 @@ Lapiz.typeCheck.func(obj, err)
 ```
 Checks if the object is a function. If a string is supplied for err, it
 will throw err if obj is not a function.
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
+#### <a name='Lapiz.typeCheck.nested'></a>Lapiz.typeCheck.nested
+```javascript
+Lapiz.typeCheck.nested(obj, nestedFields..., typeCheckFunction)
+Lapiz.typeCheck.nested(obj, nestedFields..., typeCheckFunctionName)
+```
+Checks that each nested field exists and that the last field matches the function type.
+So this:
+```javascript
+if (collection.key !== undefined && collection.key.on !== undefined && Lapiz.typeCheck.func(collection.key.on.change)){
+```
+becomes:
+```javascript
+if (Lapiz.typeCheck.nested(collection, "key", "on", "change", "func")){
+```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 

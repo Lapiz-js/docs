@@ -6,6 +6,7 @@
 * [Lapiz.Map](#Lapiz.Map)
   * [Lapiz.Map.copyProps](#Lapiz.Map.copyProps)
   * [Lapiz.Map.getter](#Lapiz.Map.getter)
+  * [Lapiz.Map.has](#Lapiz.Map.has)
   * [Lapiz.Map.meth](#Lapiz.Map.meth)
   * [Lapiz.Map.prop](#Lapiz.Map.prop)
   * [Lapiz.Map.setterGetter](#Lapiz.Map.setterGetter)
@@ -76,6 +77,14 @@ Lapiz.Map.getter(x, function foo(){
 console.log(x.foo); //0
 console.log(x.foo); //1
 ```
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
+#### <a name='Lapiz.Map.has'></a>Lapiz.Map.has
+```javascript
+Lapiz.Map.has(obj, field)
+```
+Wrapper around Object.hasOwnProperty, useful for maps.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
@@ -197,7 +206,7 @@ x.sayHello("World"); // Hello, World
 
 ### <a name='Lapiz.each'></a>Lapiz.each
 ```javascript
-Lapiz.each(collection, fn(key, val))
+Lapiz.each(collection, fn(val, key, collection))
 ```
 Iterates over the collection, calling func(key, val) for each item in the
 collection. If the collection is an array, key will be the index. If func
@@ -205,17 +214,17 @@ returns true (or an equivalent value) the Lapiz.each will return the
 current key allowing each to act as a search.
 ```javascript
 var arr = [3,1,4,1,5,9];
-Lapiz.each(arr, function(key,val){
+Lapiz.each(arr, function(val, key){
   console.log(key, val);
 });
-var gt4 = Lapiz.each(arr, function(key,val){return val > 4;});
+var gt4 = Lapiz.each(arr, function(val, key){return val > 4;});
 
 var kv = {
   "A":"apple",
   "B":"banana",
   "C":"cantaloupe"
 };
-Lapiz.each(kv, function(key,val){
+Lapiz.each(kv, function(val, key){
   console.log(key, val);
 });
 ```

@@ -59,7 +59,7 @@ indexedClass.all
 
 ### <a name='indexedClass.each'></a>indexedClass.each
 ```javascript
-indexedClass.each( function(key, val))
+indexedClass.each( function(val, key))
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>

@@ -50,7 +50,8 @@ dict(key, val)
 ```
 If only key is given, the value currently associated with that key will
 be returned. If key and val are both given, val is associated with key
-and the proper event (change or insert) will fire.
+and the proper event (change or insert) will fire. For chaining, the
+val is returned when dict is called as a setter.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
@@ -63,7 +64,7 @@ The accessor is a read-only iterface to the dictionary
 * accessor.length
 * accessor.keys
 * accessor.has(key)
-* accessor.each(fn(key, val))
+* accessor.each(fn(val, key))
 * accessor.on.insert
 * accessor.on.change
 * accessor.on.remove
@@ -174,7 +175,20 @@ Namespace for dictionary events
 ```javascript
 dict.on.change(fn(key, accessor))
 ```
-Event will fire when a new key has a new value associated with it
+Event will fire when a new key has a new value associated with it.
+
+One poentential "gotcha":
+```javascript
+  var d = Dict();
+  d.on.change = function(key, acc){
+    console.log(key, acc(key));
+  };
+  //assume person is a Lapiz Class
+  d(5, Person(5, "Adam", "admin")); // does not fire change, as it's an insert
+  d(5).role = "editor"; // this will fire person.on.change, but not dict.on.change
+  d(5, Person(5, "Bob", "editor")); // this will fire dict.on.change
+```
+To create a change listener for a class on a dict (or other accessor)
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
