@@ -5,6 +5,12 @@
 * [Lapiz.argDict](#Lapiz.argDict)
 * [Lapiz.on.class](#Lapiz.on.class)
 * [lapizClass](#lapizClass)
+  * [lapizClass.StaticGetter](#lapizClass.StaticGetter)
+  * [lapizClass.StaticMeth](#lapizClass.StaticMeth)
+  * [lapizClass.StaticProp](#lapizClass.StaticProp)
+  * [lapizClass.StaticSet](#lapizClass.StaticSet)
+    * [lapizClass.StaticSetterGetter](#lapizClass.StaticSetterGetter)
+    * [lapizClass.StaticSetterMethod](#lapizClass.StaticSetterMethod)
   * [lapizClass.on](#lapizClass.on)
     * [lapizClass.on.create](#lapizClass.on.create)
 * [lapizObject](#lapizObject)
@@ -77,6 +83,52 @@ example above, returning the public namespace is a common technique.
 
 If the second argument is 'true', a Lapiz object will not be set to 'this',
 instead it will be set to what whatever the calling scope is.
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
+#### <a name='lapizClass.StaticGetter'></a>lapizClass.StaticGetter
+```javascript
+lapizClass.StaticGetter(name, fn)
+lapizClass.StaticGetter(nameeFunc)
+```
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
+#### <a name='lapizClass.StaticMeth'></a>lapizClass.StaticMeth
+```javascript
+lapizClass.StaticMeth(name, fn)
+lapizClass.StaticMeth(namedFunc)
+```
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
+#### <a name='lapizClass.StaticProp'></a>lapizClass.StaticProp
+```javascript
+lapizClass.StaticProp(name, desc)
+```
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
+#### <a name='lapizClass.StaticSet'></a>lapizClass.StaticSet
+```javascript
+lapizClass.StaticSet(name, value)
+```
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
+##### <a name='lapizClass.StaticSetterGetter'></a>lapizClass.StaticSetterGetter
+```javascript
+lapizClass.StaticSetterGetter(name, setter)
+lapizClass.StaticSetterGetter(name, setter, getter)
+```
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
+##### <a name='lapizClass.StaticSetterMethod'></a>lapizClass.StaticSetterMethod
+```javascript
+lapizClass.StaticSetterMethod(name, fn)
+lapizClass.StaticSetterMethod(namedFunc)
+```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 

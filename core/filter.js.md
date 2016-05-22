@@ -13,6 +13,7 @@
     * [filter.func.on.change](#filter.func.on.change)
   * [filter.has](#filter.has)
   * [filter.keys](#filter.keys)
+  * [filter.kill](#filter.kill)
   * [filter.length](#filter.length)
   * [filter.on](#filter.on)
     * [filter.on.change](#filter.on.change)
@@ -22,8 +23,13 @@
 ### <a name='Lapiz.Filter'></a>Lapiz.Filter
 ```javascript
 Lapiz.Filter(accessor, filterFunc(key, accessor) )
-Lapiz.Filter(accessor, attribute, val)
+Lapiz.Filter(accessor, field, val)
 ```
+Filters an accessor based on a function of field.
+
+One edge case is that an accessor cannot filter by field
+for undefined. To do that, you have to create a function
+to check the field.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
@@ -31,7 +37,7 @@ Lapiz.Filter(accessor, attribute, val)
 ```javascript
 filter(key)
 ```
-Returns the value associated with key
+Returns the value associated with key, if it exists in the filter
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
@@ -110,6 +116,16 @@ Returns a bool indicating if the filter contains the key
 filter.keys
 ```
 Returns an array of keys
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
+#### <a name='filter.kill'></a>filter.kill
+```javascript
+filter.kill()
+```
+After calling kill, a Filter is no longer live. It will not receive
+updates and can more easily be garbage collected (because it's
+parent accessor no longer has any references to it).
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 

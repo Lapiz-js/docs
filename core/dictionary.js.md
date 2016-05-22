@@ -7,6 +7,7 @@
   * [dict.Accessor](#dict.Accessor)
   * [dict.Filter](#dict.Filter)
   * [dict.Sort](#dict.Sort)
+  * [dict._cls](#dict._cls)
   * [dict.each](#dict.each)
   * [dict.has](#dict.has)
   * [dict.keys](#dict.keys)
@@ -88,6 +89,13 @@ dict.Sort(sorterFunction)
 dict.Sort(attribute)
 ```
 Returns a Sorter with the dictionary as the accessor
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
+#### <a name='dict._cls'></a>dict._cls
+```javascript
+dict._cls
+```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
@@ -173,7 +181,7 @@ Namespace for dictionary events
 
 ##### <a name='dict.on.change'></a>dict.on.change
 ```javascript
-dict.on.change(fn(key, accessor))
+dict.on.change(fn(key, accessor, oldVal))
 ```
 Event will fire when a new key has a new value associated with it.
 
@@ -202,7 +210,7 @@ Event will fire when a new key is added to the dictionary
 
 ##### <a name='dict.on.remove'></a>dict.on.remove
 ```javascript
-dict.on.remove(fn(key, val, accessor))
+dict.on.remove(fn(key, accessor, oldVal))
 ```
 Event will fire when a key is removed.
 

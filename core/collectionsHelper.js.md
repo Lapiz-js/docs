@@ -63,7 +63,8 @@ console.log(A.y); // Test
 
 #### <a name='Lapiz.Map.getter'></a>Lapiz.Map.getter
 ```javascript
-Lapiz.Map.getter(object, namedGetterFunc)
+Lapiz.Map.getter(object, namedGetterFunc() )
+Lapiz.Map.getter(object, name, getterFunc() )
 ```
 Attaches a getter method to an object. The method must be a named function.
 ```javascript
