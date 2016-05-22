@@ -3,6 +3,7 @@
 <sub><sup>[&larr;Home](index.md)</sup></sub>
 
 * [Lapiz.Index](#Lapiz.Index)
+  * [Lapiz.Index.Class](#Lapiz.Index.Class)
 * [indexedClass.Filter](#indexedClass.Filter)
 * [indexedClass.Sort](#indexedClass.Sort)
 * [indexedClass.all](#indexedClass.all)
@@ -31,6 +32,14 @@ pass in a function as primaryFunc.
 By default, the Index methods will be attached directly to the class. If
 this would cause a namespace collision, a string can be provided as a
 domain and all methods will be attached in that namespace.
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
+#### <a name='Lapiz.Index.Class'></a>Lapiz.Index.Class
+```javascript
+Lapiz.Index.Class(constructor, primaryFunc, domain)
+```
+Shorthand helper, constructor for an indexed class.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 

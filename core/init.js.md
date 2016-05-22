@@ -11,6 +11,7 @@
   * [Lapiz.typeCheck.func](#Lapiz.typeCheck.func)
   * [Lapiz.typeCheck.nested](#Lapiz.typeCheck.nested)
   * [Lapiz.typeCheck.number](#Lapiz.typeCheck.number)
+  * [Lapiz.typeCheck.obj](#Lapiz.typeCheck.obj)
   * [Lapiz.typeCheck.string](#Lapiz.typeCheck.string)
 
 ### <a name='Lapiz.Module'></a>Lapiz.Module
@@ -126,6 +127,17 @@ Lapiz.typeCheck.number(obj, err)
 ```
 Checks if the object is a number. If a string is supplied for err, it
 will throw err if obj is not an number.
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
+#### <a name='Lapiz.typeCheck.obj'></a>Lapiz.typeCheck.obj
+```javascript
+Lapiz.typeCheck.obj(obj)
+Lapiz.typeCheck.obj(obj, err)
+```
+Checks if the object is an object. If a string is supplied for err, it
+will throw err if obj is not an number. Note that many things like Arrays and
+Dates are objects, but numbers strings and functions are not.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 

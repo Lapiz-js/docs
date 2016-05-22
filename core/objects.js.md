@@ -18,6 +18,7 @@
   * [lapizObject.event](#lapizObject.event)
   * [lapizObject.fire](#lapizObject.fire)
   * [lapizObject.getter](#lapizObject.getter)
+    * [lapizObject.getterAttr](#lapizObject.getterAttr)
   * [lapizObject.meth](#lapizObject.meth)
   * [lapizObject.properties](#lapizObject.properties)
   * [lapizObject.pub](#lapizObject.pub)
@@ -219,8 +220,21 @@ Namespace for event fire methods
 #### <a name='lapizObject.getter'></a>lapizObject.getter
 ```javascript
 lapizObject.getter(getterFn)
+lapizObject.getter(name, getterFn)
+lapizObject.getter([getterFn, ..., getterFn])
+lapizObject.getter([{name: getterFn}, ..., {name: getterFn}])
 ```
 Creates a getter property in the public namespace.
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
+##### <a name='lapizObject.getterAttr'></a>lapizObject.getterAttr
+```javascript
+lapizObject.getterAttr(name, parserFn, val)
+lapizObject.getterAttr(name, parserStr, val)
+```
+Creates a read only attribute and sets it value to val after using the
+parser
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 

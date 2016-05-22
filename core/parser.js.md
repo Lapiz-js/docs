@@ -11,11 +11,20 @@
 
 ### <a name='Lapiz.parse'></a>Lapiz.parse
 ```javascript
-Lapiz.parse
+Lapiz.parse()
 ```
-Namespace for parser methods. This namespace is left open
-so that it can be extended, particularly for use with defining
-object properties.
+Namespace for parser methods and a function to concisely invoke them
+```javascript
+Lapiz.parse("int") === Lapiz.parse.int
+```
+Which can be useful to take
+```javascript
+Lapiz.parse("array|int")
+```
+or
+```javascript
+Lapiz.parse("array|int")
+```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
