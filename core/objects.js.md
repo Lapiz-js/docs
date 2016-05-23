@@ -9,8 +9,8 @@
   * [lapizClass.StaticMeth](#lapizClass.StaticMeth)
   * [lapizClass.StaticProp](#lapizClass.StaticProp)
   * [lapizClass.StaticSet](#lapizClass.StaticSet)
-    * [lapizClass.StaticSetterGetter](#lapizClass.StaticSetterGetter)
-    * [lapizClass.StaticSetterMethod](#lapizClass.StaticSetterMethod)
+  * [lapizClass.StaticSetterGetter](#lapizClass.StaticSetterGetter)
+  * [lapizClass.StaticSetterMethod](#lapizClass.StaticSetterMethod)
   * [lapizClass.on](#lapizClass.on)
     * [lapizClass.on.create](#lapizClass.on.create)
 * [lapizObject](#lapizObject)
@@ -18,7 +18,7 @@
   * [lapizObject.event](#lapizObject.event)
   * [lapizObject.fire](#lapizObject.fire)
   * [lapizObject.getter](#lapizObject.getter)
-    * [lapizObject.getterAttr](#lapizObject.getterAttr)
+  * [lapizObject.getterAttr](#lapizObject.getterAttr)
   * [lapizObject.meth](#lapizObject.meth)
   * [lapizObject.properties](#lapizObject.properties)
   * [lapizObject.pub](#lapizObject.pub)
@@ -117,7 +117,7 @@ lapizClass.StaticSet(name, value)
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
-##### <a name='lapizClass.StaticSetterGetter'></a>lapizClass.StaticSetterGetter
+#### <a name='lapizClass.StaticSetterGetter'></a>lapizClass.StaticSetterGetter
 ```javascript
 lapizClass.StaticSetterGetter(name, setter)
 lapizClass.StaticSetterGetter(name, setter, getter)
@@ -125,7 +125,7 @@ lapizClass.StaticSetterGetter(name, setter, getter)
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
-##### <a name='lapizClass.StaticSetterMethod'></a>lapizClass.StaticSetterMethod
+#### <a name='lapizClass.StaticSetterMethod'></a>lapizClass.StaticSetterMethod
 ```javascript
 lapizClass.StaticSetterMethod(name, fn)
 lapizClass.StaticSetterMethod(namedFunc)
@@ -228,7 +228,7 @@ Creates a getter property in the public namespace.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
-##### <a name='lapizObject.getterAttr'></a>lapizObject.getterAttr
+#### <a name='lapizObject.getterAttr'></a>lapizObject.getterAttr
 ```javascript
 lapizObject.getterAttr(name, parserFn, val)
 lapizObject.getterAttr(name, parserStr, val)
