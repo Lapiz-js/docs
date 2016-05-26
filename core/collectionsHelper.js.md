@@ -94,6 +94,7 @@ Wrapper around Object.hasOwnProperty, useful for maps.
 #### <a name='Lapiz.Map.meth'></a>Lapiz.Map.meth
 ```javascript
 Lapiz.Map.meth(obj, namedFunc)
+Lapiz.Map.meth(obj, name, function)
 ```
 Attaches a method to an object. The method must be a named function.
 ```javascript
@@ -149,6 +150,7 @@ console.log(x.foo); // value will still be 12
 #### <a name='Lapiz.Map.setterMethod'></a>Lapiz.Map.setterMethod
 ```javascript
 Lapiz.Map.setterMethod(obj, namedSetterFunc)
+Lapiz.Map.setterMethod(obj, name, setterFunc)
 ```
 Attaches a setter method to an object. The method must be a named function.
 ```javascript
