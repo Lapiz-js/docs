@@ -7,6 +7,7 @@
   * [Lapiz.parse.bool](#Lapiz.parse.bool)
   * [Lapiz.parse.int](#Lapiz.parse.int)
   * [Lapiz.parse.number](#Lapiz.parse.number)
+  * [Lapiz.parse.strictBool](#Lapiz.parse.strictBool)
   * [Lapiz.parse.string](#Lapiz.parse.string)
 
 ### <a name='Lapiz.parse'></a>Lapiz.parse
@@ -46,16 +47,16 @@ console.log(arrIntParser("22.22"); // [22]
 ```javascript
 Lapiz.parse.bool(val)
 ```
-Converts val to a bool
+Converts val to a bool. Takes into account a few special edge cases, "O"
+and "false" (any case) are cast to false.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
 #### <a name='Lapiz.parse.int'></a>Lapiz.parse.int
 ```javascript
 Lapiz.parse.int(val)
-Lapiz.parse.int(val, rad)
 ```
-If rad is not defined it will default to 10. This is mostly a wrapper
+Always parses in base 10. This is mostly a wrapper
 around parseInt, however if val is a boolean it will reurn eitehr 1
 or 0.
 
@@ -66,6 +67,14 @@ or 0.
 Lapiz.parse.number(val)
 ```
 Converts val to a number. This is a wrapper around parseFloat.
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
+#### <a name='Lapiz.parse.strictBool'></a>Lapiz.parse.strictBool
+```javascript
+Lapiz.parse.strictBool(val)
+```
+Converts val to a bool
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 

@@ -119,8 +119,8 @@ lapizClass.StaticSet(name, value)
 
 #### <a name='lapizClass.StaticSetterGetter'></a>lapizClass.StaticSetterGetter
 ```javascript
-lapizClass.StaticSetterGetter(name, setter)
-lapizClass.StaticSetterGetter(name, setter, getter)
+lapizClass.StaticSetterGetter(name, val, setter)
+lapizClass.StaticSetterGetter(name, val, setter, getter)
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>

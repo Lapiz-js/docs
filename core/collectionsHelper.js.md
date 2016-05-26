@@ -65,6 +65,8 @@ console.log(A.y); // Test
 ```javascript
 Lapiz.Map.getter(object, namedGetterFunc() )
 Lapiz.Map.getter(object, name, getterFunc() )
+Lapiz.Map.getter(object, [namedGetterFuncs...] )
+Lapiz.Map.getter(object, {name: getterFunc...} )
 ```
 Attaches a getter method to an object. The method must be a named function.
 ```javascript
@@ -112,26 +114,24 @@ Just a wrapper around Object.defineProperty
 
 #### <a name='Lapiz.Map.setterGetter'></a>Lapiz.Map.setterGetter
 ```javascript
-Lapiz.Map.setterGetter(obj, name, setterFunc, getterFunc)
-Lapiz.Map.setterGetter(obj, name, setterFunc)
+Lapiz.Map.setterGetter(obj, name, val, setterFunc, getterFunc)
+Lapiz.Map.setterGetter(obj, name, val, setterFunc)
 ```
 Creates a setter/getter property via a closure. A setter function is
 required, if no getter is provided, the value will be returned. This is the
 reason the method is named setterGetter rather than the more traditional
 arrangement of "getterSetter" because the arguments are arranged so that
-the first 3 are required and the last is optional.
+the first 4 are required and the last is optional.
 ```javascript
 var x = Lapiz.Map();
-Lapiz.Map.setterGetter(x, "foo", function(i){return parseInt(i);});
-
-x.foo = "12";
+Lapiz.Map.setterGetter(x, "foo", 12, function(i){return parseInt(i);});
 console.log(x.foo); // will log 12 as an int
 ```
 The value 'this' is always set to a special setterInterface for the setter
 method. This can be used to cancel the set operation;
 ```javascript
 var x = Lapiz.Map();
-Lapiz.Map.setterGetter(x, "foo", function(i){
+Lapiz.Map.setterGetter(x, "foo", 0, function(i){
   i = parseInt(i);
   this.set = !isNaN(i);
   return i;
@@ -200,8 +200,8 @@ x.sayHello("World"); // Hello, World
 * namespace.meth(namedFunc)
 * namespace.setterMethod(namedSetterFunc)
 * namespace.getter(namedGetterFunc)
-* namespace.setterGetter(name, setter, getter)
-* namespace.setterGetter(name, setter)
+* namespace.setterGetter(name, val, setter, getter)
+* namespace.setterGetter(name, val, setter)
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 

@@ -3,12 +3,16 @@
 <sub><sup>[&larr;Home](index.md)</sup></sub>
 
 * [Lapiz.UI.hash](#Lapiz.UI.hash)
-* [Lapiz.UI.mediator.viewMethod](#Lapiz.UI.mediator.viewMethod)
+* [Lapiz.UI.mediator](#Lapiz.UI.mediator)
+  * [Lapiz.UI.mediator.form](#Lapiz.UI.mediator.form)
+  * [Lapiz.UI.mediator.viewMethod](#Lapiz.UI.mediator.viewMethod)
 * [attribute:blur](#attribute_blur)
 * [attribute:change](#attribute_change)
 * [attribute:click](#attribute_click)
 * [attribute:display](#attribute_display)
+* [attribute:focus](#attribute_focus)
 * [attribute:if](#attribute_if)
+* [attribute:ifNot](#attribute_ifNot)
 * [attribute:live](#attribute_live)
 * [attribute:q](#attribute_q)
 * [attribute:repeat](#attribute_repeat)
@@ -16,7 +20,6 @@
 * [attribute:selectVal](#attribute_selectVal)
 * [attribute:submit](#attribute_submit)
 * [attribute:view](#attribute_view)
-* [mediator:form](#mediator_form)
 
 ### <a name='Lapiz.UI.hash'></a>Lapiz.UI.hash
 ```javascript
@@ -26,9 +29,36 @@ Lapiz.UI.hash(hash, renderString)
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
-### <a name='Lapiz.UI.mediator.viewMethod'></a>Lapiz.UI.mediator.viewMethod
+### <a name='Lapiz.UI.mediator'></a>Lapiz.UI.mediator
 ```javascript
-Lapiz.UI.mediator.viewMethod
+Lapiz.UI.mediator
+```
+Mediators are a way to attach generic logic to a view.
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
+#### <a name='Lapiz.UI.mediator.form'></a>Lapiz.UI.mediator.form
+```javascript
+Lapiz.UI.mediator.form
+```
+```javascript
+  <form>
+    ...
+    <button click="form.formHandler">Go!</button>
+  </form>
+```
+```javascript
+Lapiz.UI.mediator.form("formHandler", fn(formData, formNode, ctx));
+```
+The form mediator will search up the node tree until it finds
+a form node. All elements with a name will be added to the
+formData.
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
+#### <a name='Lapiz.UI.mediator.viewMethod'></a>Lapiz.UI.mediator.viewMethod
+```javascript
+Lapiz.UI.mediator.viewMethod(viewMethodName, func(node, ctx, args...))
 ```
 Useful mediator for attaching generic methods available to views.
 
@@ -70,12 +100,31 @@ The given function will be called with the node is first displayed.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
+### <a name='attribute_focus'></a>attribute:focus
+```javascript
+attribute:focus
+```
+Causes this element to recieve focus when a view is rendered
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
 ### <a name='attribute_if'></a>attribute:if
 ```javascript
 attribute:if
 <htmlNode if="$ctxVal">...</htmlNode>
 ```
 If the attrVal ($ctxVal above) evaluates to false, the node and it's
+children are removed. If the attribute is a function it will be invoked
+with no arguments and the return value will be evaluated as a boolean
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
+### <a name='attribute_ifNot'></a>attribute:ifNot
+```javascript
+attribute:ifNot
+<htmlNode ifNot="$ctxVal">...</htmlNode>
+```
+If the attrVal ($ctxVal above) evaluates to true, the node and it's
 children are removed. If the attribute is a function it will be invoked
 with no arguments and the return value will be evaluated as a boolean
 
@@ -128,6 +177,8 @@ attribute:resolver
 ```javascript
 attribute:selectVal
 ```
+For a select box, it checks all the child select options and if it finds
+one who's value property matches val, it sets it to selected.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
@@ -144,24 +195,13 @@ The given function will be called when the submit event fires.
 ```javascript
 attribute:view
 ```
+Renders a view. By default uses the current ctx.
+```javascript
+<tag click="view.foo">Foo</tag>
+```
 
-<sub><sup>[&uarr;Top](#__top)</sup></sub>
-
-### <a name='mediator_form'></a>mediator:form
 ```javascript
-mediator:form
+Lapiz.UI.mediator.view("foo", "foo > #main");
 ```
-```javascript
-  <form>
-    ...
-    <button click="form.formHandler">Go!</button>
-  </form>
-```
-```javascript
-Lapiz.UI.mediator.form("formHandler", fn(formData));
-```
-The form mediator will search up the node tree until it finds
-a form node. All elements with a name will be added to the
-formData.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>

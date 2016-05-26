@@ -5,6 +5,7 @@
 * [collectionsHelper.js](collectionsHelper.js.md)
 * [dependency.js](dependency.js.md)
 * [dictionary.js](dictionary.js.md)
+* [errors.js](errors.js.md)
 * [events.js](events.js.md)
 * [filter.js](filter.js.md)
 * [index.js](index.js.md)

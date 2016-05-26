@@ -3,6 +3,7 @@
 <sub><sup>[Back](../index.md)</sup></sub>
 
 * [ajax/](ajax/index.md)
+* [dragDrop/](dragDrop/index.md)
 * [template/](template/index.md)
 * [ui/](ui/index.md)
 * [validator/](validator/index.md)

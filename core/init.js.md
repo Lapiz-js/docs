@@ -49,9 +49,10 @@ If bool evaluates to false, an error is thrown with err.
 ### <a name='Lapiz.set'></a>Lapiz.set
 ```javascript
 Lapiz.set(obj, name, value)
+Lapiz.set(obj, namedFunction)
 ```
 Defines a fixed propery on an object. Properties defined this way cannot be
-overridden.
+overridden. Attempting to set them will throw an error.
 ```javascript
 var x = {};
 x.foo = function(){...};
@@ -68,11 +69,11 @@ y.foo = 12; // this will not override the method
 ### <a name='Lapiz.typeCheck'></a>Lapiz.typeCheck
 ```javascript
 Lapiz.typeCheck(obj, type)
-Lapiz.typeCheck(obj, type, err)
+Lapiz.typeCheck(obj, type, errStr)
 ```
 Checks if the type of obj matches type. If type is a string, typeof will be
 used, if type is a class, instanceof will be used. To throw an error when
-the types do not match, specify err as a string. Other wise, typeCheck will
+the types do not match, specify errStr as a string. Other wise, typeCheck will
 return a boolean indicating if the types matched.
 ```javascript
 Lapiz.typeCheck([], Array); // true
@@ -86,20 +87,20 @@ Lapiz.typeCheck([], "string", "Expected string"); // throws an error
 #### <a name='Lapiz.typeCheck.array'></a>Lapiz.typeCheck.array
 ```javascript
 Lapiz.typeCheck.array(obj)
-Lapiz.typeCheck.array(obj, err)
+Lapiz.typeCheck.array(obj, errStr)
 ```
-Checks if the object is a array. If a string is supplied for err, it
-will throw err if obj is not an array.
+Checks if the object is a array. If a string is supplied for errStr, it
+will throw errStr if obj is not an array.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
 #### <a name='Lapiz.typeCheck.func'></a>Lapiz.typeCheck.func
 ```javascript
 Lapiz.typeCheck.func(obj)
-Lapiz.typeCheck.func(obj, err)
+Lapiz.typeCheck.func(obj, errStr)
 ```
-Checks if the object is a function. If a string is supplied for err, it
-will throw err if obj is not a function.
+Checks if the object is a function. If a string is supplied for errStr, it
+will throw errStr if obj is not a function.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
@@ -123,20 +124,20 @@ if (Lapiz.typeCheck.nested(collection, "key", "on", "change", "func")){
 #### <a name='Lapiz.typeCheck.number'></a>Lapiz.typeCheck.number
 ```javascript
 Lapiz.typeCheck.number(obj)
-Lapiz.typeCheck.number(obj, err)
+Lapiz.typeCheck.number(obj, errStr)
 ```
-Checks if the object is a number. If a string is supplied for err, it
-will throw err if obj is not an number.
+Checks if the object is a number. If a string is supplied for errStr, it
+will throw errStr if obj is not an number.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
 #### <a name='Lapiz.typeCheck.obj'></a>Lapiz.typeCheck.obj
 ```javascript
 Lapiz.typeCheck.obj(obj)
-Lapiz.typeCheck.obj(obj, err)
+Lapiz.typeCheck.obj(obj, errStr)
 ```
-Checks if the object is an object. If a string is supplied for err, it
-will throw err if obj is not an number. Note that many things like Arrays and
+Checks if the object is an object. If a string is supplied for errStr, it
+will throw errStr if obj is not an number. Note that many things like Arrays and
 Dates are objects, but numbers strings and functions are not.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
@@ -144,9 +145,9 @@ Dates are objects, but numbers strings and functions are not.
 #### <a name='Lapiz.typeCheck.string'></a>Lapiz.typeCheck.string
 ```javascript
 Lapiz.typeCheck.string(obj)
-Lapiz.typeCheck.string(obj, err)
+Lapiz.typeCheck.string(obj, errStr)
 ```
-Checks if the object is a string. If a string is supplied for err, it
-will throw err if obj is not an string.
+Checks if the object is a string. If a string is supplied for errStr, it
+will throw errStr if obj is not an string.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
