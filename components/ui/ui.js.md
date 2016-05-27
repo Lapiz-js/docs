@@ -19,7 +19,9 @@
   * [Lapiz.UI.id](#Lapiz.UI.id)
   * [Lapiz.UI.mediator](#Lapiz.UI.mediator)
     * [Lapiz.UI.mediator.mediatorName](#Lapiz.UI.mediator.mediatorName)
+  * [Lapiz.UI.on.add](#Lapiz.UI.on.add)
   * [Lapiz.UI.on.loaded](#Lapiz.UI.on.loaded)
+  * [Lapiz.UI.on.move](#Lapiz.UI.on.move)
   * [Lapiz.UI.on.remove](#Lapiz.UI.on.remove)
   * [Lapiz.UI.render](#Lapiz.UI.render)
 * [attribute](#attribute)
@@ -222,6 +224,14 @@ Defines a mediator property. If
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
+#### <a name='Lapiz.UI.on.add'></a>Lapiz.UI.on.add
+```javascript
+Lapiz.UI.on.add(node, fn)
+```
+When the node is added to the document, fn will be called.
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
 #### <a name='Lapiz.UI.on.loaded'></a>Lapiz.UI.on.loaded
 ```javascript
 Lapiz.UI.on.loaded(fn())
@@ -230,11 +240,19 @@ Lapiz.UI.on.loaded = fn()
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
+#### <a name='Lapiz.UI.on.move'></a>Lapiz.UI.on.move
+```javascript
+Lapiz.UI.on.move(node, fn)
+```
+When the node is moved with in the document, fn will be called.
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
 #### <a name='Lapiz.UI.on.remove'></a>Lapiz.UI.on.remove
 ```javascript
 Lapiz.UI.on.remove(node, fn)
 ```
-When the document is removed, fn will be called.
+When the node is removed from the document, fn will be called.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
