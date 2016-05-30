@@ -11,6 +11,7 @@
   * [Lapiz.UI.bindState](#Lapiz.UI.bindState)
     * [Lapiz.UI.bindState.after](#Lapiz.UI.bindState.after)
     * [Lapiz.UI.bindState.ctx](#Lapiz.UI.bindState.ctx)
+    * [Lapiz.UI.bindState.firstPass](#Lapiz.UI.bindState.firstPass)
     * [Lapiz.UI.bindState.parent](#Lapiz.UI.bindState.parent)
     * [Lapiz.UI.bindState.proceed](#Lapiz.UI.bindState.proceed)
     * [Lapiz.UI.bindState.templator](#Lapiz.UI.bindState.templator)
@@ -111,6 +112,16 @@ Lapiz.UI.bindState.ctx
 ```
 Initially, this is set to the ctx that is resolved for the binding
 operationg. If it is changed by attribute, that will become the context
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
+##### <a name='Lapiz.UI.bindState.firstPass'></a>Lapiz.UI.bindState.firstPass
+```javascript
+Lapiz.UI.bindState.firstPass
+```
+The bind operation may run several times during the life span of a node
+for various update operations. This property will indicate if this is the
+first pass binding.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 

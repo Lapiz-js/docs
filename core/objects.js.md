@@ -6,7 +6,7 @@
 * [Lapiz.on.class](#Lapiz.on.class)
 * [lapizClass](#lapizClass)
   * [lapizClass.StaticGetter](#lapizClass.StaticGetter)
-  * [lapizClass.StaticMeth](#lapizClass.StaticMeth)
+  * [lapizClass.StaticMethod](#lapizClass.StaticMethod)
   * [lapizClass.StaticProp](#lapizClass.StaticProp)
   * [lapizClass.StaticSet](#lapizClass.StaticSet)
   * [lapizClass.StaticSetterGetter](#lapizClass.StaticSetterGetter)
@@ -21,6 +21,10 @@
   * [lapizObject.getterAttr](#lapizObject.getterAttr)
   * [lapizObject.meth](#lapizObject.meth)
   * [lapizObject.properties](#lapizObject.properties)
+    * [lapizObject.properties:fireChange](#lapizObject.properties_fireChange)
+    * [lapizObject.properties:setterInterface](#lapizObject.properties_setterInterface)
+      * [lapizObject.properties:setterInterface.event](#lapizObject.properties_setterInterface.event)
+      * [lapizObject.properties:setterInterface.set](#lapizObject.properties_setterInterface.set)
   * [lapizObject.pub](#lapizObject.pub)
     * [lapizObject.pub.on](#lapizObject.pub.on)
       * [lapizObject.pub.on.change](#lapizObject.pub.on.change)
@@ -95,10 +99,10 @@ lapizClass.StaticGetter(nameeFunc)
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
-#### <a name='lapizClass.StaticMeth'></a>lapizClass.StaticMeth
+#### <a name='lapizClass.StaticMethod'></a>lapizClass.StaticMethod
 ```javascript
-lapizClass.StaticMeth(name, fn)
-lapizClass.StaticMeth(namedFunc)
+lapizClass.StaticMethod(name, fn)
+lapizClass.StaticMethod(namedFunc)
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
@@ -189,7 +193,7 @@ var obj = Lapiz.Object(function(){
 obj.pub.name = "test";
 console.log(obj.attr.name); // test
 obj.attr.name = "bar";
-console.log(obj.pub.name); // test
+console.log(obj.pub.name); // bar
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
@@ -281,6 +285,40 @@ var obj = Lapiz.Object(function(){
   });
 });
 ```
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
+##### <a name='lapizObject.properties_fireChange'></a>lapizObject.properties:fireChange
+```javascript
+lapizObject.properties:fireChange
+```
+setting this to false will prevent the fire event, but the value
+will still be set to the return value
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
+##### <a name='lapizObject.properties_setterInterface'></a>lapizObject.properties:setterInterface
+```javascript
+lapizObject.properties:setterInterface
+```
+The 'this' property of a setter will be the setter interface
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
+###### <a name='lapizObject.properties_setterInterface.event'></a>lapizObject.properties:setterInterface.event
+```javascript
+lapizObject.properties:setterInterface.event(obj.pub, val, oldVal)
+```
+Attaching an event here will cause this event to be fired after the
+set operation
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
+###### <a name='lapizObject.properties_setterInterface.set'></a>lapizObject.properties:setterInterface.set
+```javascript
+lapizObject.properties:setterInterface.set
+```
+Setting this to false will prevent the set and event fire
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
