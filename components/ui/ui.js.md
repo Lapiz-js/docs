@@ -184,7 +184,7 @@ Lapiz.UI.id(elId, doc)
 #### <a name='Lapiz.UI.mediator'></a>Lapiz.UI.mediator
 ```javascript
 Lapiz.UI.mediator(mediatorName,fn)
-Lapiz.UI.mediator(mediators)
+Lapiz.UI.mediator(namedMediatorFn)
 ```
 Mediators are a pattern to provide reusable code. Mediators can only be
 used as an attribute value and always follow the pattern of two words

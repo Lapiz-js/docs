@@ -13,6 +13,7 @@
 * [attribute:focus](#attribute_focus)
 * [attribute:if](#attribute_if)
 * [attribute:ifNot](#attribute_ifNot)
+* [attribute:isChecked](#attribute_isChecked)
 * [attribute:live](#attribute_live)
 * [attribute:q](#attribute_q)
 * [attribute:repeat](#attribute_repeat)
@@ -127,6 +128,16 @@ attribute:ifNot
 If the attrVal ($ctxVal above) evaluates to true, the node and it's
 children are removed. If the attribute is a function it will be invoked
 with no arguments and the return value will be evaluated as a boolean
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
+### <a name='attribute_isChecked'></a>attribute:isChecked
+```javascript
+attribute:isChecked
+<htmlNode isChecked="$boolVal">...</htmlNode>
+```
+Will set the checked attribute. If combined with live, will keep the
+checked status up to date.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
