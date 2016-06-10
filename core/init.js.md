@@ -73,8 +73,8 @@ Lapiz.typeCheck(obj, type, errStr)
 ```
 Checks if the type of obj matches type. If type is a string, typeof will be
 used, if type is a class, instanceof will be used. To throw an error when
-the types do not match, specify errStr as a string. Other wise, typeCheck will
-return a boolean indicating if the types matched.
+the types do not match, specify errStr as a string. Other wise, typeCheck
+will return a boolean indicating if the types matched.
 ```javascript
 Lapiz.typeCheck([], Array); // true
 Lapiz.typeCheck("test", "string"); // true

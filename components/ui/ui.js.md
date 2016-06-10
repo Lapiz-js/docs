@@ -6,6 +6,7 @@
   * [Lapiz.UI.Children](#Lapiz.UI.Children)
   * [Lapiz.UI.CloneView](#Lapiz.UI.CloneView)
   * [Lapiz.UI.View](#Lapiz.UI.View)
+  * [Lapiz.UI.appendChild](#Lapiz.UI.appendChild)
   * [Lapiz.UI.attribute](#Lapiz.UI.attribute)
   * [Lapiz.UI.bind](#Lapiz.UI.bind)
   * [Lapiz.UI.bindState](#Lapiz.UI.bindState)
@@ -18,6 +19,7 @@
   * [Lapiz.UI.empty](#Lapiz.UI.empty)
   * [Lapiz.UI.getStyle](#Lapiz.UI.getStyle)
   * [Lapiz.UI.id](#Lapiz.UI.id)
+  * [Lapiz.UI.insertAfter](#Lapiz.UI.insertAfter)
   * [Lapiz.UI.mediator](#Lapiz.UI.mediator)
     * [Lapiz.UI.mediator.mediatorName](#Lapiz.UI.mediator.mediatorName)
   * [Lapiz.UI.on.add](#Lapiz.UI.on.add)
@@ -27,7 +29,6 @@
   * [Lapiz.UI.render](#Lapiz.UI.render)
 * [attribute](#attribute)
   * [attribute:l-view](#attribute_l-view)
-  * [attribute:resolver](#attribute_resolver)
 * [tag](#tag)
   * [tag:l-view](#tag_l-view)
   * [tag:render](#tag_render)
@@ -64,6 +65,16 @@ Returns an html Node that is a clone of the View.
 Lapiz.UI.View(name, viewStr)
 ```
 Adds a view that can be rendered or cloned.
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
+#### <a name='Lapiz.UI.appendChild'></a>Lapiz.UI.appendChild
+```javascript
+Lapiz.UI.appendChild(child)
+Lapiz.UI.appendChild(child, parent)
+Lapiz.UI.appendChild(childStr)
+Lapiz.UI.appendChild(childStr, parent)
+```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
@@ -181,6 +192,13 @@ Lapiz.UI.id(elId, doc)
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
+#### <a name='Lapiz.UI.insertAfter'></a>Lapiz.UI.insertAfter
+```javascript
+Lapiz.UI.insertAfter(newNode, afterElement)
+```
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
 #### <a name='Lapiz.UI.mediator'></a>Lapiz.UI.mediator
 ```javascript
 Lapiz.UI.mediator(mediatorName,fn)
@@ -290,17 +308,6 @@ attribute:l-view
 Used to create a lapiz view:
 All nodes in the document with this attribute will be cloned and saved and
 the original will be removed from the document.
-
-<sub><sup>[&uarr;Top](#__top)</sup></sub>
-
-#### <a name='attribute_resolver'></a>attribute:resolver
-```javascript
-attribute:resolver
-<tag resolver="$resolver">...</tag>
-```
-Takes the current tokenizer and the tokenizer assigned and creates a new
-templator that will be used on all attributes processed after this and all
-child nodes. By default, resolver is the first attribute evaluated.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 

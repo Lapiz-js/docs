@@ -20,7 +20,10 @@
 * [attribute:resolver](#attribute_resolver)
 * [attribute:selectVal](#attribute_selectVal)
 * [attribute:submit](#attribute_submit)
+* [attribute:templator](#attribute_templator)
 * [attribute:view](#attribute_view)
+* [mediator:resolver](#mediator_resolver)
+* [mediator:templator](#mediator_templator)
 
 ### <a name='Lapiz.UI.hash'></a>Lapiz.UI.hash
 ```javascript
@@ -180,7 +183,11 @@ removals. To keep thecontents up to date, also use live.
 ### <a name='attribute_resolver'></a>attribute:resolver
 ```javascript
 attribute:resolver
+<tag resolver="$resolver">...</tag>
 ```
+Takes the current tokenizer and the tokenizer assigned and creates a new
+templator that will be used on all attributes processed after this and all
+child nodes. By default, resolver is the first attribute evaluated.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
@@ -202,6 +209,18 @@ The given function will be called when the submit event fires.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
+### <a name='attribute_templator'></a>attribute:templator
+```javascript
+attribute:templator
+<tag templator="$templator">...</tag>
+```
+Takes the current tokenizer and the tokenizer assigned and creates a new
+templator that will be used on all attributes processed after this and all
+child nodes. By default, templator is the second attribute evaluated only
+after resolver.
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
 ### <a name='attribute_view'></a>attribute:view
 ```javascript
 attribute:view
@@ -213,6 +232,20 @@ Renders a view. By default uses the current ctx.
 
 ```javascript
 Lapiz.UI.mediator.view("foo", "foo > #main");
+```
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
+### <a name='mediator_resolver'></a>mediator:resolver
+```javascript
+mediator:resolver
+```
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
+### <a name='mediator_templator'></a>mediator:templator
+```javascript
+mediator:templator
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
