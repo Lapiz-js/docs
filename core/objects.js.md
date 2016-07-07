@@ -2,6 +2,7 @@
 
 <sub><sup>[&larr;Home](index.md)</sup></sub>
 
+* [$L.tis](#$L.tis)
 * [Lapiz.argDict](#Lapiz.argDict)
 * [Lapiz.on.class](#Lapiz.on.class)
 * [lapizClass](#lapizClass)
@@ -30,6 +31,15 @@
       * [lapizObject.pub.on.change](#lapizObject.pub.on.change)
       * [lapizObject.pub.on.delete](#lapizObject.pub.on.delete)
   * [lapizObject.setMany](#lapizObject.setMany)
+
+### <a name='$L.tis'></a>$L.tis
+```javascript
+$L.tis(obj, fn)
+```
+Same thing as bind, should be refactored out. Also, moving towards adding
+bind options to the Map methods.
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
 
 ### <a name='Lapiz.argDict'></a>Lapiz.argDict
 ```javascript
