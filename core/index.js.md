@@ -4,6 +4,7 @@
 
 * [Lapiz.Index](#Lapiz.Index)
   * [Lapiz.Index.Class](#Lapiz.Index.Class)
+  * [Lapiz.Index.defaultPrimary](#Lapiz.Index.defaultPrimary)
 * [indexedClass.Filter](#indexedClass.Filter)
 * [indexedClass.Sort](#indexedClass.Sort)
 * [indexedClass.all](#indexedClass.all)
@@ -33,6 +34,10 @@ By default, the Index methods will be attached directly to the class. If
 this would cause a namespace collision, a string can be provided as a
 domain and all methods will be attached in that namespace.
 
+The class does not have to be a lapizClass, but it must have a similar
+interface. Specifically, it must have cls.on.change and the instances of
+the class must have obj.on.change and obj.on.delete.
+
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
 #### <a name='Lapiz.Index.Class'></a>Lapiz.Index.Class
@@ -40,6 +45,14 @@ domain and all methods will be attached in that namespace.
 Lapiz.Index.Class(constructor, primaryFunc, domain)
 ```
 Shorthand helper, constructor for an indexed class.
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
+#### <a name='Lapiz.Index.defaultPrimary'></a>Lapiz.Index.defaultPrimary
+```javascript
+Lapiz.Index.defaultPrimary
+```
+Sets the default primary key name. It defaults to "id".
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 

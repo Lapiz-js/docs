@@ -16,18 +16,21 @@
   * [Lapiz.Map.setterGetter](#Lapiz.Map.setterGetter)
   * [Lapiz.Map.setterMethod](#Lapiz.Map.setterMethod)
 * [Lapiz.Namespace](#Lapiz.Namespace)
+* [Lapiz.argMap](#Lapiz.argMap)
 * [Lapiz.each](#Lapiz.each)
+* [Lapiz.getFnName](#Lapiz.getFnName)
 * [Lapiz.remove](#Lapiz.remove)
 * [lapizObject.properties:fire](#lapizObject.properties_fire)
 * [lapizObject.properties:setterInterface](#lapizObject.properties_setterInterface)
   * [lapizObject.properties:setterInterface.event](#lapizObject.properties_setterInterface.event)
   * [lapizObject.properties:setterInterface.set](#lapizObject.properties_setterInterface.set)
-* [namespace.attr](#namespace.attr)
-* [namespace.meth](#namespace.meth)
-* [namespace.namespace](#namespace.namespace)
-* [namespace.properties](#namespace.properties)
-* [namespace.set](#namespace.set)
-* [namespace.setterMethod](#namespace.setterMethod)
+* [namespace](#namespace)
+  * [namespace.attr](#namespace.attr)
+  * [namespace.meth](#namespace.meth)
+  * [namespace.namespace](#namespace.namespace)
+  * [namespace.properties](#namespace.properties)
+  * [namespace.set](#namespace.set)
+  * [namespace.setterMethod](#namespace.setterMethod)
 
 ### <a name='Lapiz.ArrayConverter'></a>Lapiz.ArrayConverter
 ```javascript
@@ -57,13 +60,14 @@ create a proptery that cannot be overridden.
 
 #### <a name='Lapiz.Map.binder'></a>Lapiz.Map.binder
 ```javascript
-Lapiz.Map.binder(proto, fn)
+Lapiz.Map.binder(proto, namedFn)
+Lapiz.Map.binder(proto, name, fn)
 ```
 Handles late binding for prototype methods
 ```javascript
 var fooProto = {};
 binder(fooProto, function sayHi(){
-  console.log("Hi, "+name);
+  console.log("Hi, " + this.name);
 });
 var x = {};
 x.__proto__ = fooProto;
@@ -177,11 +181,14 @@ Just a wrapper around Object.defineProperty
 
 #### <a name='Lapiz.Map.setProperties'></a>Lapiz.Map.setProperties
 ```javascript
+Lapiz.Map.setProperties(obj, attr, properties, values, callback)
 Lapiz.Map.setProperties(obj, attr, properties, values)
+Lapiz.Map.setProperties(obj, attr, properties, callback)
 Lapiz.Map.setProperties(obj, attr, properties)
 ```
 Defines properties on an object and puts the underlying value in the
-attributes collection.
+attributes collection. If callback is defined, it will be called whenever
+any of the setters is invoked.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
@@ -263,6 +270,22 @@ returned, otherwise the namespace wrapper is returned.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
+### <a name='Lapiz.argMap'></a>Lapiz.argMap
+```javascript
+Lapiz.argMap()
+```
+This is one of the few "magic methods" in Lapiz. When called from within a
+function, it returns the arguments names and values as a map.
+```javascript
+function foo(x,y,z){
+  var args = Lapiz.argMap();
+  console.log(args);
+}
+foo('do','re','mi'); // logs {'x':'do', 'y':'re', 'z':'mi'}
+```
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
 ### <a name='Lapiz.each'></a>Lapiz.each
 ```javascript
 Lapiz.each(collection, fn(val, key, collection))
@@ -287,6 +310,15 @@ Lapiz.each(kv, function(val, key){
   console.log(key, val);
 });
 ```
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
+### <a name='Lapiz.getFnName'></a>Lapiz.getFnName
+```javascript
+Lapiz.getFnName(fn)
+```
+Returns the name of a function. Throws an error if the function is
+anoymous. Also strips "bound" off the front of bound functions.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
@@ -320,6 +352,29 @@ will still be set to the return value
 lapizObject.properties:setterInterface
 ```
 The 'this' property of a setter will be the setter interface
+```javascript
+  var obj = $L.Map();
+  var attr = $L.Map();
+  $L.Map.setProperties(obj, attr,{
+    "*id": "int",
+    "foo": function(val){
+      // 'this' is not the setterInterface
+      if (val === attr['foo']){
+        // can suppress set and fire
+        this.set = false;
+      }
+      if (val === "quite"){
+        // can suppress fire (but will still set)
+        this.fire = false;
+      }
+      if ($L.typeCheck.func(val)){
+        // can set a callback that will invoked:
+        // callback(obj, 'foo', val, oldVal)
+        this.callback = val;
+      }
+    }
+  })
+```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
@@ -340,7 +395,23 @@ Setting this to false will prevent the set and event fire
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
-### <a name='namespace.attr'></a>namespace.attr
+### <a name='namespace'></a>namespace
+```javascript
+namespace
+```
+The "this" object on a Namespace constructor.
+```javascript
+var foo = Lapiz.Namespace(function(){
+  this.properties(...);
+  this.meth(...);
+  this.set(...);
+  // and so forth
+});
+```
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
+#### <a name='namespace.attr'></a>namespace.attr
 ```javascript
 namespace.attr
 ```
@@ -348,7 +419,7 @@ This is where the attributes for properties are stored.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
-### <a name='namespace.meth'></a>namespace.meth
+#### <a name='namespace.meth'></a>namespace.meth
 ```javascript
 namespace.meth(namedFn)
 namespace.meth(name, fn)
@@ -356,7 +427,7 @@ namespace.meth(name, fn)
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
-### <a name='namespace.namespace'></a>namespace.namespace
+#### <a name='namespace.namespace'></a>namespace.namespace
 ```javascript
 namespace.namespace
 ```
@@ -365,21 +436,22 @@ outer wrapper holds the tools for attaching these.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
-### <a name='namespace.properties'></a>namespace.properties
+#### <a name='namespace.properties'></a>namespace.properties
 ```javascript
 namespace.properties(props, vals)
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
-### <a name='namespace.set'></a>namespace.set
+#### <a name='namespace.set'></a>namespace.set
 ```javascript
 namespace.set(name, val)
 ```
+Sets the value as a property on the namespace.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
-### <a name='namespace.setterMethod'></a>namespace.setterMethod
+#### <a name='namespace.setterMethod'></a>namespace.setterMethod
 ```javascript
 namespace.setterMethod(namedFn)
 namespace.setterMethod(name, fn)

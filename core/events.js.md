@@ -38,13 +38,13 @@ e.fire("Test 2"); //will log "Test 2" to the console
 #### <a name='Lapiz.Event.linkProperty'></a>Lapiz.Event.linkProperty
 ```javascript
 Lapiz.Event.linkProperty(obj, name, evt)
+Lapiz.Event.linkProperty(obj, name)
 ```
 This is a helper function for linking an event to an object. It will be
 linked like a setter method:
 ```javascript
-var e = Lapiz.Event();
 var map = Lapiz.Map();
-Lapiz.Event.linkProperty(map, "foo", e);
+var e = Lapiz.Event.linkProperty(map, "foo");
 // These two are the same
 map.foo(function(){...});
 map.foo = function(){...};
@@ -52,6 +52,7 @@ map.foo = function(){...};
 // To deregister
 map.foo.deregister(fn);
 ```
+If no event is given, one is created. The even is returned (either way).
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 

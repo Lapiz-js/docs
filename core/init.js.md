@@ -61,7 +61,7 @@ x.foo = 12; //the method is now gone
 
 var y = {};
 Lapiz.set(y, "foo", function{...});
-y.foo = 12; // this will not override the method
+y.foo = 12; // this will not override the method and will throw an error
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
