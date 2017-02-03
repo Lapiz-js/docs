@@ -7,12 +7,12 @@
 * [Lapiz.assert](#Lapiz.assert)
 * [Lapiz.set](#Lapiz.set)
 * [Lapiz.typeCheck](#Lapiz.typeCheck)
-  * [Lapiz.typeCheck.array](#Lapiz.typeCheck.array)
+  * [Lapiz.typeCheck.arr](#Lapiz.typeCheck.arr)
   * [Lapiz.typeCheck.func](#Lapiz.typeCheck.func)
   * [Lapiz.typeCheck.nested](#Lapiz.typeCheck.nested)
   * [Lapiz.typeCheck.number](#Lapiz.typeCheck.number)
   * [Lapiz.typeCheck.obj](#Lapiz.typeCheck.obj)
-  * [Lapiz.typeCheck.string](#Lapiz.typeCheck.string)
+  * [Lapiz.typeCheck.str](#Lapiz.typeCheck.str)
 
 ### <a name='Lapiz.Module'></a>Lapiz.Module
 ```javascript
@@ -84,10 +84,10 @@ Lapiz.typeCheck([], "string", "Expected string"); // throws an error
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
-#### <a name='Lapiz.typeCheck.array'></a>Lapiz.typeCheck.array
+#### <a name='Lapiz.typeCheck.arr'></a>Lapiz.typeCheck.arr
 ```javascript
-Lapiz.typeCheck.array(obj)
-Lapiz.typeCheck.array(obj, errStr)
+Lapiz.typeCheck.arr(obj)
+Lapiz.typeCheck.arr(obj, errStr)
 ```
 Checks if the object is a array. If a string is supplied for errStr, it
 will throw errStr if obj is not an array.
@@ -142,10 +142,10 @@ Dates are objects, but numbers strings and functions are not.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
-#### <a name='Lapiz.typeCheck.string'></a>Lapiz.typeCheck.string
+#### <a name='Lapiz.typeCheck.str'></a>Lapiz.typeCheck.str
 ```javascript
-Lapiz.typeCheck.string(obj)
-Lapiz.typeCheck.string(obj, errStr)
+Lapiz.typeCheck.str(obj)
+Lapiz.typeCheck.str(obj, errStr)
 ```
 Checks if the object is a string. If a string is supplied for errStr, it
 will throw errStr if obj is not an string.

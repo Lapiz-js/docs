@@ -1,4 +1,4 @@
-## core/objects.js<a name="__top"></a>
+## components/oldObject/objects.js<a name="__top"></a>
 
 <sub><sup>[&larr;Home](index.md)</sup></sub>
 
@@ -37,7 +37,7 @@
 $L.tis(obj, fn)
 ```
 Same thing as bind, should be refactored out. Also, moving towards adding
-bind options to the Map methods.
+bind options to the.set.methods.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 

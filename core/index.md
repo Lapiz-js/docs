@@ -11,7 +11,5 @@
 * [index.js](index.js.md)
 * [init.js](init.js.md)
 * [object.js](object.js.md)
-* [object2.js](object2.js.md)
-* [objects.js](objects.js.md)
 * [parser.js](parser.js.md)
 * [sorter.js](sorter.js.md)

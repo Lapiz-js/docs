@@ -4,7 +4,7 @@
 
 * [Lapiz.Err](#Lapiz.Err)
   * [Lapiz.Err.logTo](#Lapiz.Err.logTo)
-  * [Lapiz.Err.throw](#Lapiz.Err.throw)
+  * [Lapiz.Err.toss](#Lapiz.Err.toss)
 * [Lapiz.on.error](#Lapiz.on.error)
 
 ### <a name='Lapiz.Err'></a>Lapiz.Err
@@ -28,10 +28,10 @@ But a custom logger can also be used.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
-#### <a name='Lapiz.Err.throw'></a>Lapiz.Err.throw
+#### <a name='Lapiz.Err.toss'></a>Lapiz.Err.toss
 ```javascript
-Lapiz.Err.throw(Error)
-Lapiz.Err.throw(errString)
+Lapiz.Err.toss(Error)
+Lapiz.Err.toss(errString)
 ```
 Sends the event to any errHandlers, then throws the event. Note that the
 error handlers cannot catch the error.
@@ -43,6 +43,6 @@ error handlers cannot catch the error.
 Lapiz.on.error( errHandler(err) )
 Lapiz.on.error = errHandler(err)
 ```
-Register an error handler to listen for errors thrown with Lapiz.Err.throw
+Register an error handler to listen for errors thrown with Lapiz.Err.toss
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>

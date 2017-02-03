@@ -21,7 +21,7 @@ Lapiz.Index(lapizClass, primaryFunc)
 Lapiz.Index(lapizClass, primaryField)
 Lapiz.Index(lapizClass, primary, domain)
 ```
-Adds an index to a class. If class.on.change and class.on.delete exist,
+Adds an index to a class. If class.on.change and class.on.remove exist,
 the index will use these to keep itself up to date.
 
 Index needs a primary key. Any to entries with the same primary key are
@@ -36,7 +36,7 @@ domain and all methods will be attached in that namespace.
 
 The class does not have to be a lapizClass, but it must have a similar
 interface. Specifically, it must have cls.on.change and the instances of
-the class must have obj.on.change and obj.on.delete.
+the class must have obj.on.change and obj.on.remove.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
