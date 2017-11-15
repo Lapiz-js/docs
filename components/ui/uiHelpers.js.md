@@ -43,22 +43,20 @@ Mediators are a way to attach generic logic to a view.
 
 #### <a name='Lapiz.UI.mediator.form'></a>Lapiz.UI.mediator.form
 ```javascript
-Lapiz.UI.mediator.form("formHandler", fn(formData, formNode, ctx));
+Lapiz.UI.mediator.form
 ```
 ```javascript
   <form>
-    <input ... name="someName" />
-    <input ... name="someOtherName" parse="someParser" />
     ...
     <button click="form.formHandler">Go!</button>
   </form>
 ```
-The form mediator will search up the node tree until it finds a form node.
-All elements with a name will be added to the formData. If the type is
-"checkbox" or "radio", a boolean will be added. For any other type a string
-will be added based on n.value unless the tag has a "parse" attribute. If
-it does have a parse attribute, that will be used to get a parser from
-Lapiz.parse which will be used against the form value.
+```javascript
+Lapiz.UI.mediator.form("formHandler", fn(formData, formNode, ctx));
+```
+The form mediator will search up the node tree until it finds
+a form node. All elements with a name will be added to the
+formData.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
@@ -234,6 +232,15 @@ Renders a view. By default uses the current ctx.
 
 ```javascript
 Lapiz.UI.mediator.view("foo", "foo > #main");
+```
+or
+```javascript
+Lapiz.UI.mediator.view("foo", function(node, ctx){
+  return {
+    view: "someview > #string",
+    ctx: {"another": "context"}
+  };
+});
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
