@@ -6,6 +6,7 @@
 * [Lapiz.on.Cls](#Lapiz.on.Cls)
 * [classDef](#classDef)
   * [classDef.constructor](#classDef.constructor)
+  * [classDef.getter](#classDef.getter)
   * [classDef.meth](#classDef.meth)
   * [classDef.properties](#classDef.properties)
 * [obj](#obj)
@@ -53,6 +54,15 @@ A class definition is the object used to define a Lapiz Class.
 classDef.constructor(constructor)
 ```
 Defines the constructor for a class.
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
+#### <a name='classDef.getter'></a>classDef.getter
+```javascript
+classDef.getter(namedFn)
+classDef.getter(name, fn)
+```
+Defines a getter on the class. Getter are late-bound:
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
