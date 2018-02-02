@@ -89,10 +89,10 @@ Levels determines how many levels up the stack to go.
 ```javascript
 Lapiz.each(collection, fn(val, key, collection))
 ```
-Iterates over the collection, calling func(key, val) for each item in the
-collection. If the collection is an array, key will be the index. If func
-returns true (or an equivalent value) the Lapiz.each will return the
-current key allowing each to act as a search.
+Iterates over the collection, calling func(key, val, collection) for each
+item in the collection. If the collection is an array, key will be the
+index. If func returns true (or an equivalent value) the Lapiz.each will
+return the current key allowing each to act as a search.
 ```javascript
 var arr = [3,1,4,1,5,9];
 Lapiz.each(arr, function(val, key){

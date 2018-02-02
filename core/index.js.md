@@ -5,11 +5,11 @@
 * [Lapiz.Index](#Lapiz.Index)
   * [Lapiz.Index.Class](#Lapiz.Index.Class)
   * [Lapiz.Index.defaultPrimary](#Lapiz.Index.defaultPrimary)
-* [indexedClass.Exclude](#indexedClass.Exclude)
 * [indexedClass.Filter](#indexedClass.Filter)
 * [indexedClass.Sort](#indexedClass.Sort)
 * [indexedClass.all](#indexedClass.all)
 * [indexedClass.each](#indexedClass.each)
+* [indexedClass.exclude](#indexedClass.exclude)
 * [indexedClass.get](#indexedClass.get)
 * [indexedClass.has](#indexedClass.has)
 * [indexedClass.keys](#indexedClass.keys)
@@ -57,16 +57,6 @@ Sets the default primary key name. It defaults to "id".
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
-### <a name='indexedClass.Exclude'></a>indexedClass.Exclude
-```javascript
-indexedClass.Exclude
-```
-This can be set to a function that takes an instance of the class and
-returns a boolean. If it returns true then the object will not be
-indexed.
-
-<sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='indexedClass.Filter'></a>indexedClass.Filter
 ```javascript
 indexedClass.Filter(filterFunc)
@@ -94,6 +84,16 @@ indexedClass.all
 ```javascript
 indexedClass.each( function(val, key))
 ```
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+
+### <a name='indexedClass.exclude'></a>indexedClass.exclude
+```javascript
+indexedClass.exclude
+```
+This can be set to a function that takes an instance of the class and
+returns a boolean. If it returns true then the object will not be
+indexed.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 
