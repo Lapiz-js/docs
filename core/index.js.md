@@ -1,4 +1,4 @@
-## core/index.js<a name="__top"></a>
+## Lapiz/core/index.js<a name="__top"></a>
 
 <sub><sup>[&larr;Home](index.md)</sup></sub>
 
@@ -40,7 +40,6 @@ interface. Specifically, it must have cls.on.change and the instances of
 the class must have obj.on.change and obj.on.remove.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.Index.Class'></a>Lapiz.Index.Class
 ```javascript
 Lapiz.Index.Class(constructor, primaryFunc, domain)
@@ -48,7 +47,6 @@ Lapiz.Index.Class(constructor, primaryFunc, domain)
 Shorthand helper, constructor for an indexed class.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.Index.defaultPrimary'></a>Lapiz.Index.defaultPrimary
 ```javascript
 Lapiz.Index.defaultPrimary
@@ -56,7 +54,6 @@ Lapiz.Index.defaultPrimary
 Sets the default primary key name. It defaults to "id".
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='indexedClass.Filter'></a>indexedClass.Filter
 ```javascript
 indexedClass.Filter(filterFunc)
@@ -64,7 +61,6 @@ indexedClass.Filter(filterField, val)
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='indexedClass.Sort'></a>indexedClass.Sort
 ```javascript
 indexedClass.Sort(sortFunc)
@@ -72,21 +68,18 @@ indexedClass.Sort(sortField)
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='indexedClass.all'></a>indexedClass.all
 ```javascript
 indexedClass.all
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='indexedClass.each'></a>indexedClass.each
 ```javascript
 indexedClass.each( function(val, key))
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='indexedClass.exclude'></a>indexedClass.exclude
 ```javascript
 indexedClass.exclude
@@ -96,7 +89,6 @@ returns a boolean. If it returns true then the object will not be
 indexed.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='indexedClass.get'></a>indexedClass.get
 ```javascript
 indexedClass.get(primaryKey)
@@ -104,21 +96,18 @@ indexedClass.get(field, val)
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='indexedClass.has'></a>indexedClass.has
 ```javascript
 indexedClass.has(key)
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='indexedClass.keys'></a>indexedClass.keys
 ```javascript
 indexedClass.keys
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='indexedClass.remove'></a>indexedClass.remove
 ```javascript
 indexedClass.remove(key)

@@ -1,4 +1,4 @@
-## Index of lapiz/core/
+## Index of Lapiz/core
 
 <sub><sup>[Back](../index.md)</sup></sub>
 

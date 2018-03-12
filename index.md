@@ -1,4 +1,5 @@
-## Index of lapiz/
+## Index of Lapiz
 
-* [components/](components/index.md)
-* [core/](core/index.md)
+* [components](components/index.md)
+* [core](core/index.md)
+* [testing](testing/index.md)

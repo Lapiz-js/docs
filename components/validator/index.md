@@ -1,4 +1,4 @@
-## Index of lapiz/components/validator/
+## Index of Lapiz/components/validator
 
 <sub><sup>[Back](../index.md)</sup></sub>
 

@@ -1,4 +1,4 @@
-## components/template/template.js<a name="__top"></a>
+## Lapiz/components/template/template.js<a name="__top"></a>
 
 <sub><sup>[&larr;Home](index.md)</sup></sub>
 
@@ -16,7 +16,6 @@ Lapiz.Template
 Namespace for templating
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.Template.Std'></a>Lapiz.Template.Std
 ```javascript
 Lapiz.Template.Std
@@ -24,7 +23,6 @@ Lapiz.Template.Std
 Namespace for the standard templators
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ##### <a name='Lapiz.Template.Std.resolver'></a>Lapiz.Template.Std.resolver
 ```javascript
 Lapiz.Template.Std.resolver(token, ctx)
@@ -35,7 +33,6 @@ If at any point it encounters undefined, it will return undefined.
 If the token is "$", it will return the ctx.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ##### <a name='Lapiz.Template.Std.templator'></a>Lapiz.Template.Std.templator
 ```javascript
 Lapiz.Template.Std.templator(template, ctx)
@@ -48,7 +45,6 @@ will return the matching value from the context, even if that
 value is not a string.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ##### <a name='Lapiz.Template.Std.tokenizer'></a>Lapiz.Template.Std.tokenizer
 ```javascript
 Lapiz.Template.Std.tokenizer(template, ctx, resolver)
@@ -62,7 +58,6 @@ the resolver will be returned, even if that value is not
 a string.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.Template.Templator'></a>Lapiz.Template.Templator
 ```javascript
 Lapiz.Template.Templator(tokenizer, resolver)

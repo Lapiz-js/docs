@@ -1,4 +1,4 @@
-## core/errors.js<a name="__top"></a>
+## Lapiz/core/errors.js<a name="__top"></a>
 
 <sub><sup>[&larr;Home](index.md)</sup></sub>
 
@@ -14,7 +14,6 @@ Lapiz.Err
 Namespace for error handling.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.Err.logTo'></a>Lapiz.Err.logTo
 ```javascript
 Lapiz.Err.logTo = logger
@@ -27,7 +26,6 @@ Lapiz.Err.logTo = console
 But a custom logger can also be used.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.Err.toss'></a>Lapiz.Err.toss
 ```javascript
 Lapiz.Err.toss(Error)
@@ -37,7 +35,6 @@ Sends the event to any errHandlers, then throws the event. Note that the
 error handlers cannot catch the error.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='Lapiz.on.error'></a>Lapiz.on.error
 ```javascript
 Lapiz.on.error( errHandler(err) )

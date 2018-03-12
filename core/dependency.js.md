@@ -1,4 +1,4 @@
-## core/dependency.js<a name="__top"></a>
+## Lapiz/core/dependency.js<a name="__top"></a>
 
 <sub><sup>[&larr;Home](index.md)</sup></sub>
 
@@ -16,7 +16,6 @@ Lapiz.Dependency(name)
 Returns the dependency associated with name
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.Dependency.Factory'></a>Lapiz.Dependency.Factory
 ```javascript
 Lapiz.Dependency.Factory(name, fn)
@@ -25,7 +24,6 @@ Factory is the most direct of the dependency registrations, it registers
 the function directly
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.Dependency.Reference'></a>Lapiz.Dependency.Reference
 ```javascript
 Lapiz.Dependency.Reference(name, resource)
@@ -37,7 +35,6 @@ Lapiz.Dependency(name)
 will return the resource.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.Dependency.Service'></a>Lapiz.Dependency.Service
 ```javascript
 Lapiz.Dependency.Service(name, constructor)
@@ -52,7 +49,6 @@ new constructor(args...)
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.Dependency.has'></a>Lapiz.Dependency.has
 ```javascript
 Lapiz.Dependency.has(name)
@@ -61,7 +57,6 @@ Returns a boolean indicating if there is a resource registered corresonding
 to name.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.Dependency.remove'></a>Lapiz.Dependency.remove
 ```javascript
 Lapiz.Dependency.remove(name)

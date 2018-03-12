@@ -1,4 +1,4 @@
-## core/sorter.js<a name="__top"></a>
+## Lapiz/core/sorter.js<a name="__top"></a>
 
 <sub><sup>[&larr;Home](index.md)</sup></sub>
 
@@ -35,7 +35,6 @@ field will be used. If nothing is given, the accessor will be sorted by
 key.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.Sort.gt'></a>Lapiz.Sort.gt
 ```javascript
 Lapiz.Sort.gt(key, index, fn, accessor)
@@ -47,7 +46,6 @@ that the accessor is sorted. It returns the position in index of the first
 key that is greater than the val in the accessor.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.Sort.locationOf'></a>Lapiz.Sort.locationOf
 ```javascript
 Lapiz.Sort.locationOf(val, index, fn, accessor)
@@ -59,14 +57,12 @@ that the accessor is sorted. It returns the position in index of the first
 key that is greater than or equal to val in the accessor.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='sort.Accessor'></a>sort.Accessor
 ```javascript
 sort.Accessor
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='sort.Filter'></a>sort.Filter
 ```javascript
 sort.Filter(accessor, filterFunc(key, accessor) )
@@ -78,7 +74,6 @@ through unnecessary layers of events. Better to create a filter on the
 sorters accessor.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='sort.Range'></a>sort.Range
 ```javascript
 sort.Range(val)
@@ -89,7 +84,6 @@ or between start and stop (start inclusive, stop exclusive). The result
 is returned as a Dictionary, but it is not wired in to update.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='sort.Sort'></a>sort.Sort
 ```javascript
 sort.Sort(accessor, sorterFunc(keyA, keyB, accessor))
@@ -101,7 +95,6 @@ The sorting operations do not stack so this just passes the events
 through unnecessary layers of events
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='sort.each'></a>sort.each
 ```javascript
 sort.each( function(val, key, sorter) )
@@ -109,7 +102,6 @@ sort.each( function(val, key, sorter) )
 Iterates over the collection in order
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='sort.func'></a>sort.func
 ```javascript
 sort.func(sorterFunction)
@@ -120,14 +112,12 @@ sort.func = field
 Assign a new function or field to sort by;
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='sort.has'></a>sort.has
 ```javascript
 sort.has(key)
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='sort.keys'></a>sort.keys
 ```javascript
 sort.keys
@@ -136,7 +126,6 @@ Read-only property. The keys will be in the order that the sorter has
 arranged them.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='sort.kill'></a>sort.kill
 ```javascript
 sort.kill()
@@ -146,14 +135,12 @@ updates and can more easily be garbage collected (because it's
 parent accessor no longer has any references to it).
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='sort.length'></a>sort.length
 ```javascript
 sort.length
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='sort.on'></a>sort.on
 ```javascript
 sort.on
@@ -161,7 +148,6 @@ sort.on
 Namespace for event registration
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='sort.on.change'></a>sort.on.change
 ```javascript
 sort.on.change(fn)
@@ -169,7 +155,6 @@ sort.on.change = fn
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='sort.on.insert'></a>sort.on.insert
 ```javascript
 sort.on.insert(fn)
@@ -177,7 +162,6 @@ sort.on.insert = fn
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='sort.on.remove'></a>sort.on.remove
 ```javascript
 sort.on.remove(fn)
@@ -185,7 +169,6 @@ sort.on.remove = fn
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='sortFunction'></a>sortFunction
 ```javascript
 sortFunction(keyA, keyB, accessor)
@@ -197,7 +180,6 @@ equal return 0 and if keyB should come after keyA, return a value less
 than 0.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='sortFunction.range'></a>sortFunction.range
 ```javascript
 sortFunction.range(keyA, valB, accessor)

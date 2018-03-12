@@ -1,4 +1,4 @@
-## Index of lapiz/components/template/
+## Index of Lapiz/components/template
 
 <sub><sup>[Back](../index.md)</sup></sub>
 

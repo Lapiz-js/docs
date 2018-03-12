@@ -1,4 +1,4 @@
-## core/collectionsHelper.js<a name="__top"></a>
+## Lapiz/core/collectionsHelper.js<a name="__top"></a>
 
 <sub><sup>[&larr;Home](index.md)</sup></sub>
 
@@ -13,7 +13,7 @@
   * [Lapiz.set.binder](#Lapiz.set.binder)
   * [Lapiz.set.copyProps](#Lapiz.set.copyProps)
   * [Lapiz.set.getter](#Lapiz.set.getter)
-  * [Lapiz.set.getterFactory](#Lapiz.set.getterFactory)
+    * [Lapiz.set.getterFactory](#Lapiz.set.getterFactory)
   * [Lapiz.set.meth](#Lapiz.set.meth)
   * [Lapiz.set.prop](#Lapiz.set.prop)
   * [Lapiz.set.setProperties](#Lapiz.set.setProperties)
@@ -26,12 +26,13 @@
   * [Lapiz.set.setterGetter](#Lapiz.set.setterGetter)
   * [Lapiz.set.setterMethod](#Lapiz.set.setterMethod)
 * [namespace](#namespace)
-  * [namespace.attr](#namespace.attr)
-  * [namespace.meth](#namespace.meth)
-  * [namespace.namespace](#namespace.namespace)
-  * [namespace.properties](#namespace.properties)
-  * [namespace.set](#namespace.set)
-  * [namespace.setterMethod](#namespace.setterMethod)
+  * [namespace](#namespace)
+    * [namespace.attr](#namespace.attr)
+    * [namespace.meth](#namespace.meth)
+    * [namespace.namespace](#namespace.namespace)
+    * [namespace.properties](#namespace.properties)
+    * [namespace.set](#namespace.set)
+      * [namespace.setterMethod](#namespace.setterMethod)
 
 ### <a name='Lapiz.ArrayConverter'></a>Lapiz.ArrayConverter
 ```javascript
@@ -44,7 +45,6 @@ interfacing with other libraries and frameworks. Use the accessor interface
 whenever possible.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='Lapiz.Map'></a>Lapiz.Map
 ```javascript
 Lapiz.Map()
@@ -58,7 +58,6 @@ They can be called on any object. They all use Object.defineProperty to
 create a proptery that cannot be overridden.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.Map.has'></a>Lapiz.Map.has
 ```javascript
 Lapiz.Map.has(obj, field)
@@ -66,7 +65,6 @@ Lapiz.Map.has(obj, field)
 Wrapper around Object.hasOwnProperty, useful for maps.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='Lapiz.argMap'></a>Lapiz.argMap
 ```javascript
 Lapiz.argMap()
@@ -84,7 +82,6 @@ foo('do','re','mi'); // logs {'x':'do', 'y':'re', 'z':'mi'}
 Levels determines how many levels up the stack to go.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='Lapiz.each'></a>Lapiz.each
 ```javascript
 Lapiz.each(collection, fn(val, key, collection))
@@ -111,7 +108,6 @@ Lapiz.each(kv, function(val, key){
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='Lapiz.getFnName'></a>Lapiz.getFnName
 ```javascript
 Lapiz.getFnName(fn)
@@ -120,7 +116,6 @@ Returns the name of a function. Throws an error if the function is
 anoymous. Also strips "bound" off the front of bound functions.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='Lapiz.remove'></a>Lapiz.remove
 ```javascript
 Lapiz.remove(arr, el, start)
@@ -136,7 +131,6 @@ console.log(arr); //[3,4,1,5,9]
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='Lapiz.set'></a>Lapiz.set
 ```javascript
 Lapiz.set
@@ -145,7 +139,6 @@ Defined in init. This is used as a namespace for many helpers in setting
 properties.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.set.binder'></a>Lapiz.set.binder
 ```javascript
 Lapiz.set.binder(proto, namedFn)
@@ -170,7 +163,6 @@ With late binding, 'this' will always refer to the original 'this' context,
 but bound functions will only be generated when they are called or assigned
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.set.copyProps'></a>Lapiz.set.copyProps
 ```javascript
 Lapiz.set.copyProps(copyTo, copyFrom, props...)
@@ -190,7 +182,6 @@ console.log(A.y); // Test
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.set.getter'></a>Lapiz.set.getter
 ```javascript
 Lapiz.set.getter(object, namedGetterFunc() )
@@ -212,8 +203,7 @@ console.log(x.foo); //1
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
-#### <a name='Lapiz.set.getterFactory'></a>Lapiz.set.getterFactory
+##### <a name='Lapiz.set.getterFactory'></a>Lapiz.set.getterFactory
 ```javascript
 Lapiz.set.getterFactory(attr, property)
 Lapiz.set.getterFactory(attr, func)
@@ -221,7 +211,6 @@ Lapiz.set.getterFactory(attr, func)
 Used in generating properties on an object or namespace.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.set.meth'></a>Lapiz.set.meth
 ```javascript
 Lapiz.set.meth(obj, namedFunc)
@@ -250,7 +239,6 @@ y.bar(); // calls x.foo with this set to x
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.set.prop'></a>Lapiz.set.prop
 ```javascript
 Lapiz.set.prop(obj, name, desc)
@@ -258,7 +246,6 @@ Lapiz.set.prop(obj, name, desc)
 Just a wrapper around Object.defineProperty
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.set.setProperties'></a>Lapiz.set.setProperties
 ```javascript
 Lapiz.set.setProperties(obj, attr, properties, values, callback)
@@ -271,7 +258,6 @@ attributes collection. If callback is defined, it will be called whenever
 any of the setters is invoked.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ##### <a name='Lapiz.set.setProperties_fire'></a>Lapiz.set.setProperties:fire
 ```javascript
 Lapiz.set.setProperties:fire
@@ -280,38 +266,36 @@ setting this to false will prevent the fire event, but the value
 will still be set to the return value
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ##### <a name='Lapiz.set.setProperties_setterInterface'></a>Lapiz.set.setProperties:setterInterface
 ```javascript
 Lapiz.set.setProperties:setterInterface
 ```
 The 'this' property of a setter will be the setter interface
 ```javascript
-  var obj = $L.Map();
-  var attr = $L.Map();
-  $L.set.setProperties(obj, attr,{
-    "*id": "int",
-    "foo": function(val){
-      // 'this' is not the setterInterface
-      if (val === attr['foo']){
-        // can suppress set and fire
-        this.set = false;
-      }
-      if (val === "quite"){
-        // can suppress fire (but will still set)
-        this.fire = false;
-      }
-      if ($L.typeCheck.func(val)){
-        // can set a callback that will invoked:
-        // callback(obj, 'foo', val, oldVal)
-        this.callback = val;
-      }
+var obj = $L.Map();
+var attr = $L.Map();
+$L.set.setProperties(obj, attr,{
+  "*id": "int",
+  "foo": function(val){
+    // 'this' is not the setterInterface
+    if (val === attr['foo']){
+      // can suppress set and fire
+      this.set = false;
     }
-  })
+    if (val === "quite"){
+      // can suppress fire (but will still set)
+      this.fire = false;
+    }
+    if ($L.typeCheck.func(val)){
+      // can set a callback that will invoked:
+      // callback(obj, 'foo', val, oldVal)
+      this.callback = val;
+    }
+  }
+})
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ###### <a name='Lapiz.set.setProperties_setterInterface.event'></a>Lapiz.set.setProperties:setterInterface.event
 ```javascript
 Lapiz.set.setProperties:setterInterface.event(obj.pub, val, oldVal)
@@ -320,7 +304,6 @@ Attaching an event here will cause this event to be fired after the
 set operation
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ###### <a name='Lapiz.set.setProperties_setterInterface.self'></a>Lapiz.set.setProperties:setterInterface.self
 ```javascript
 Lapiz.set.setProperties:setterInterface.self
@@ -328,7 +311,6 @@ Lapiz.set.setProperties:setterInterface.self
 A reference to the object on which the setting was defined
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ###### <a name='Lapiz.set.setProperties_setterInterface.set'></a>Lapiz.set.setProperties:setterInterface.set
 ```javascript
 Lapiz.set.setProperties:setterInterface.set
@@ -336,7 +318,6 @@ Lapiz.set.setProperties:setterInterface.set
 Setting this to false will prevent the set and event fire
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.set.setterFactory'></a>Lapiz.set.setterFactory
 ```javascript
 Lapiz.set.setterFactory(self, attr, field, func)
@@ -349,7 +330,6 @@ the returned value will be set in attr[field]. If callback is defined,
 self will be passed into callback
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.set.setterGetter'></a>Lapiz.set.setterGetter
 ```javascript
 Lapiz.set.setterGetter(obj, name, val, setterFunc, getterFunc)
@@ -383,7 +363,6 @@ console.log(x.foo); // value will still be 12
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.set.setterMethod'></a>Lapiz.set.setterMethod
 ```javascript
 Lapiz.set.setterMethod(obj, namedSetterFunc)
@@ -404,7 +383,6 @@ If an object is supplied for bind, the "this" value will always be the bind
 object, this can be useful if the method will be passed as a value.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='namespace'></a>namespace
 ```javascript
 namespace = Lapiz.Namespace()
@@ -414,24 +392,36 @@ Returns a namespace. If a constructor is given, the inner namespace is
 returned, otherwise the namespace wrapper is returned.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
+#### <a name='namespace'></a>namespace
+```javascript
+namespace
+```
+The "this" object on a Namespace constructor.
+```javascript
+var foo = Lapiz.Namespace(function(){
+  this.properties(...);
+  this.meth(...);
+  this.set(...);
+  // and so forth
+});
+```
 
-#### <a name='namespace.attr'></a>namespace.attr
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+##### <a name='namespace.attr'></a>namespace.attr
 ```javascript
 namespace.attr
 ```
 This is where the attributes for properties are stored.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
-#### <a name='namespace.meth'></a>namespace.meth
+##### <a name='namespace.meth'></a>namespace.meth
 ```javascript
 namespace.meth(namedFn)
 namespace.meth(name, fn)
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
-#### <a name='namespace.namespace'></a>namespace.namespace
+##### <a name='namespace.namespace'></a>namespace.namespace
 ```javascript
 namespace.namespace
 ```
@@ -439,23 +429,20 @@ The inner namespace is where all methods and properties are attached, the
 outer wrapper holds the tools for attaching these.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
-#### <a name='namespace.properties'></a>namespace.properties
+##### <a name='namespace.properties'></a>namespace.properties
 ```javascript
 namespace.properties(props, vals)
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
-#### <a name='namespace.set'></a>namespace.set
+##### <a name='namespace.set'></a>namespace.set
 ```javascript
 namespace.set(name, val)
 ```
 Sets the value as a property on the namespace.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
-#### <a name='namespace.setterMethod'></a>namespace.setterMethod
+###### <a name='namespace.setterMethod'></a>namespace.setterMethod
 ```javascript
 namespace.setterMethod(namedFn)
 namespace.setterMethod(name, fn)

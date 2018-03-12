@@ -1,8 +1,8 @@
-## core/dictionary.js<a name="__top"></a>
+## Lapiz/core/dictionary.js<a name="__top"></a>
 
 <sub><sup>[&larr;Home](index.md)</sup></sub>
 
-* [Lapiz.Dictioanry](#Lapiz.Dictioanry)
+* [Lapiz.Dictionary](#Lapiz.Dictionary)
 * [dict](#dict)
   * [dict.Accessor](#dict.Accessor)
   * [dict.Filter](#dict.Filter)
@@ -18,10 +18,10 @@
     * [dict.on.remove](#dict.on.remove)
   * [dict.remove](#dict.remove)
 
-### <a name='Lapiz.Dictioanry'></a>Lapiz.Dictioanry
+### <a name='Lapiz.Dictionary'></a>Lapiz.Dictionary
 ```javascript
-Lapiz.Dictioanry()
-Lapiz.Dictioanry(seed)
+Lapiz.Dictionary()
+Lapiz.Dictionary(seed)
 ```
 Dictionaries allow for the storage of key/value pairs in a container that
 will emit events as the contents change.
@@ -43,7 +43,6 @@ console.log(emptyDict(12)); // apricot
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='dict'></a>dict
 ```javascript
 dict(key)
@@ -55,7 +54,6 @@ and the proper event (change or insert) will fire. For chaining, the
 val is returned when dict is called as a setter.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='dict.Accessor'></a>dict.Accessor
 ```javascript
 dict.Accessor
@@ -73,7 +71,6 @@ The accessor is a read-only iterface to the dictionary
 * accessor.Filter
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='dict.Filter'></a>dict.Filter
 ```javascript
 dict.Filter(filterFunction)
@@ -82,7 +79,6 @@ dict.Filter(attribute, val)
 Returns a Filter with the dictionary as the accessor
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='dict.Sort'></a>dict.Sort
 ```javascript
 dict.Sort(sorterFunction)
@@ -91,14 +87,12 @@ dict.Sort(attribute)
 Returns a Sorter with the dictionary as the accessor
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='dict._cls'></a>dict._cls
 ```javascript
 dict._cls
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='dict.each'></a>dict.each
 ```javascript
 dict.each(fn(key, val))
@@ -120,7 +114,6 @@ fruitDict(function(key, val){
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='dict.has'></a>dict.has
 ```javascript
 dict.has(key)
@@ -138,7 +131,6 @@ console.log(fruitDict.has(12)); // false
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='dict.keys'></a>dict.keys
 ```javascript
 dict.keys
@@ -154,7 +146,6 @@ console.log(fruitDict.keys); // ["C", "A", "B"] in some order
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='dict.length'></a>dict.length
 ```javascript
 dict.length
@@ -170,7 +161,6 @@ console.log(fruitDict.length); // 3
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='dict.on'></a>dict.on
 ```javascript
 dict.on
@@ -178,7 +168,6 @@ dict.on
 Namespace for dictionary events
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ##### <a name='dict.on.change'></a>dict.on.change
 ```javascript
 dict.on.change(fn(key, accessor, oldVal))
@@ -187,19 +176,18 @@ Event will fire when a new key has a new value associated with it.
 
 One poentential "gotcha":
 ```javascript
-  var d = Dict();
-  d.on.change = function(key, acc){
-    console.log(key, acc(key));
-  };
-  //assume person is a Lapiz Class
-  d(5, Person(5, "Adam", "admin")); // does not fire change, as it's an insert
-  d(5).role = "editor"; // this will fire person.on.change, but not dict.on.change
-  d(5, Person(5, "Bob", "editor")); // this will fire dict.on.change
+var d = Dict();
+d.on.change = function(key, acc){
+  console.log(key, acc(key));
+};
+//assume person is a Lapiz Class
+d(5, Person(5, "Adam", "admin")); // does not fire change, as it's an insert
+d(5).role = "editor"; // this will fire person.on.change, but not dict.on.change
+d(5, Person(5, "Bob", "editor")); // this will fire dict.on.change
 ```
 To create a change listener for a class on a dict (or other accessor)
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ##### <a name='dict.on.insert'></a>dict.on.insert
 ```javascript
 dict.on.insert(fn(key, accessor))
@@ -207,7 +195,6 @@ dict.on.insert(fn(key, accessor))
 Event will fire when a new key is added to the dictionary
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ##### <a name='dict.on.remove'></a>dict.on.remove
 ```javascript
 dict.on.remove(fn(key, accessor, oldVal))
@@ -215,7 +202,6 @@ dict.on.remove(fn(key, accessor, oldVal))
 Event will fire when a key is removed.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='dict.remove'></a>dict.remove
 ```javascript
 dict.remove(key)

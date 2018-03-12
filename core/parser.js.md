@@ -1,4 +1,4 @@
-## core/parser.js<a name="__top"></a>
+## Lapiz/core/parser.js<a name="__top"></a>
 
 <sub><sup>[&larr;Home](index.md)</sup></sub>
 
@@ -18,7 +18,7 @@ Namespace for parser methods and a function to concisely invoke them
 ```javascript
 Lapiz.parse("int") === Lapiz.parse.int
 ```
-Which can be useful to take
+Which can be useful to take 
 ```javascript
 Lapiz.parse("array|int")
 ```
@@ -28,7 +28,6 @@ Lapiz.parse("array|int")
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.parse.array'></a>Lapiz.parse.array
 ```javascript
 Lapiz.parse.array(parser)
@@ -42,7 +41,6 @@ console.log(arrIntParser("22.22"); // [22]
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.parse.bool'></a>Lapiz.parse.bool
 ```javascript
 Lapiz.parse.bool(val)
@@ -51,7 +49,6 @@ Converts val to a bool. Takes into account a few special edge cases, "O"
 and "false" (any case) are cast to false.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.parse.int'></a>Lapiz.parse.int
 ```javascript
 Lapiz.parse.int(val)
@@ -61,7 +58,6 @@ around parseInt, however if val is a boolean it will reurn eitehr 1
 or 0.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.parse.number'></a>Lapiz.parse.number
 ```javascript
 Lapiz.parse.number(val)
@@ -69,7 +65,6 @@ Lapiz.parse.number(val)
 Converts val to a number. This is a wrapper around parseFloat.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.parse.strictBool'></a>Lapiz.parse.strictBool
 ```javascript
 Lapiz.parse.strictBool(val)
@@ -77,7 +72,6 @@ Lapiz.parse.strictBool(val)
 Converts val to a bool
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.parse.string'></a>Lapiz.parse.string
 ```javascript
 Lapiz.parse.string

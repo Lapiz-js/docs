@@ -1,4 +1,4 @@
-## components/ui/ui.js<a name="__top"></a>
+## Lapiz/components/ui/ui.js<a name="__top"></a>
 
 <sub><sup>[&larr;Home](index.md)</sup></sub>
 
@@ -9,13 +9,13 @@
   * [Lapiz.UI.appendChild](#Lapiz.UI.appendChild)
   * [Lapiz.UI.attribute](#Lapiz.UI.attribute)
   * [Lapiz.UI.bind](#Lapiz.UI.bind)
-  * [Lapiz.UI.bindState](#Lapiz.UI.bindState)
-    * [Lapiz.UI.bindState.after](#Lapiz.UI.bindState.after)
-    * [Lapiz.UI.bindState.ctx](#Lapiz.UI.bindState.ctx)
-    * [Lapiz.UI.bindState.firstPass](#Lapiz.UI.bindState.firstPass)
-    * [Lapiz.UI.bindState.parent](#Lapiz.UI.bindState.parent)
-    * [Lapiz.UI.bindState.proceed](#Lapiz.UI.bindState.proceed)
-    * [Lapiz.UI.bindState.templator](#Lapiz.UI.bindState.templator)
+    * [Lapiz.UI.bindState](#Lapiz.UI.bindState)
+      * [Lapiz.UI.bindState.after](#Lapiz.UI.bindState.after)
+      * [Lapiz.UI.bindState.ctx](#Lapiz.UI.bindState.ctx)
+      * [Lapiz.UI.bindState.firstPass](#Lapiz.UI.bindState.firstPass)
+      * [Lapiz.UI.bindState.parent](#Lapiz.UI.bindState.parent)
+      * [Lapiz.UI.bindState.proceed](#Lapiz.UI.bindState.proceed)
+      * [Lapiz.UI.bindState.templator](#Lapiz.UI.bindState.templator)
   * [Lapiz.UI.empty](#Lapiz.UI.empty)
   * [Lapiz.UI.getStyle](#Lapiz.UI.getStyle)
   * [Lapiz.UI.id](#Lapiz.UI.id)
@@ -40,7 +40,6 @@ Lapiz.UI
 Namespace for the UI methods.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.UI.Children'></a>Lapiz.UI.Children
 ```javascript
 Lapiz.UI.Children(node)
@@ -51,7 +50,6 @@ the built-in node.children will leave out. Node can also be a document
 fragment. If a selectorStr is used, it will be run against document.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.UI.CloneView'></a>Lapiz.UI.CloneView
 ```javascript
 Lapiz.UI.CloneView(name)
@@ -59,7 +57,6 @@ Lapiz.UI.CloneView(name)
 Returns an html Node that is a clone of the View.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.UI.View'></a>Lapiz.UI.View
 ```javascript
 Lapiz.UI.View(name, viewStr)
@@ -67,7 +64,6 @@ Lapiz.UI.View(name, viewStr)
 Adds a view that can be rendered or cloned.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.UI.appendChild'></a>Lapiz.UI.appendChild
 ```javascript
 Lapiz.UI.appendChild(child)
@@ -77,7 +73,6 @@ Lapiz.UI.appendChild(childStr, parent)
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.UI.attribute'></a>Lapiz.UI.attribute
 ```javascript
 Lapiz.UI.attribute(name, fn(node, ctx, attrVal) )
@@ -86,7 +81,6 @@ Lapiz.UI.attribute(attributes)
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.UI.bind'></a>Lapiz.UI.bind
 ```javascript
 Lapiz.UI.bind(node, ctx, templator)
@@ -97,8 +91,7 @@ it will use the standard templator Generally, it is better to call
 Lapiz.UI.render than Lapiz.UI.bind.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
-#### <a name='Lapiz.UI.bindState'></a>Lapiz.UI.bindState
+##### <a name='Lapiz.UI.bindState'></a>Lapiz.UI.bindState
 ```javascript
 Lapiz.UI.bindState
 ```
@@ -107,8 +100,7 @@ available to the attributes during the binding process so they can direct
 aspects of the bind process.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
-##### <a name='Lapiz.UI.bindState.after'></a>Lapiz.UI.bindState.after
+###### <a name='Lapiz.UI.bindState.after'></a>Lapiz.UI.bindState.after
 ```javascript
 Lapiz.UI.bindState.after(fn);
 ```
@@ -116,8 +108,7 @@ Adds a function that will be called after all attributes and child nodes
 have been handled.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
-##### <a name='Lapiz.UI.bindState.ctx'></a>Lapiz.UI.bindState.ctx
+###### <a name='Lapiz.UI.bindState.ctx'></a>Lapiz.UI.bindState.ctx
 ```javascript
 Lapiz.UI.bindState.ctx
 ```
@@ -125,8 +116,7 @@ Initially, this is set to the ctx that is resolved for the binding
 operationg. If it is changed by attribute, that will become the context
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
-##### <a name='Lapiz.UI.bindState.firstPass'></a>Lapiz.UI.bindState.firstPass
+###### <a name='Lapiz.UI.bindState.firstPass'></a>Lapiz.UI.bindState.firstPass
 ```javascript
 Lapiz.UI.bindState.firstPass
 ```
@@ -135,16 +125,14 @@ for various update operations. This property will indicate if this is the
 first pass binding.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
-##### <a name='Lapiz.UI.bindState.parent'></a>Lapiz.UI.bindState.parent
+###### <a name='Lapiz.UI.bindState.parent'></a>Lapiz.UI.bindState.parent
 ```javascript
 Lapiz.UI.bindState.parent
 ```
 The bindstate of the parent node.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
-##### <a name='Lapiz.UI.bindState.proceed'></a>Lapiz.UI.bindState.proceed
+###### <a name='Lapiz.UI.bindState.proceed'></a>Lapiz.UI.bindState.proceed
 ```javascript
 Lapiz.UI.bindState.proceed
 ```
@@ -153,15 +141,13 @@ and the child nodes will not be processed. This is useful if an attribute
 is removing a node.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
-##### <a name='Lapiz.UI.bindState.templator'></a>Lapiz.UI.bindState.templator
+###### <a name='Lapiz.UI.bindState.templator'></a>Lapiz.UI.bindState.templator
 ```javascript
 Lapiz.UI.bindState.templator
 ```
 The templator that will be used
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.UI.empty'></a>Lapiz.UI.empty
 ```javascript
 Lapiz.UI.empty(node)
@@ -169,7 +155,6 @@ Lapiz.UI.empty(nodeId)
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.UI.getStyle'></a>Lapiz.UI.getStyle
 ```javascript
 Lapiz.UI.getStyle(node, property)
@@ -183,7 +168,6 @@ the node will be found with doc.querySelector. For defaults, doc will
 document, docView will be 'defaultView' and pseudoElt will be null.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.UI.id'></a>Lapiz.UI.id
 ```javascript
 Lapiz.UI.id(elId)
@@ -191,14 +175,12 @@ Lapiz.UI.id(elId, doc)
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.UI.insertAfter'></a>Lapiz.UI.insertAfter
 ```javascript
 Lapiz.UI.insertAfter(newNode, afterElement)
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.UI.mediator'></a>Lapiz.UI.mediator
 ```javascript
 Lapiz.UI.mediator(mediatorName,fn)
@@ -243,16 +225,14 @@ Lapiz.UI.mediator.form("newPerson", function(newPersonData){...});
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ##### <a name='Lapiz.UI.mediator.mediatorName'></a>Lapiz.UI.mediator.mediatorName
 ```javascript
 Lapiz.UI.mediator.mediatorName(propertyName, property)
 Lapiz.UI.mediator.mediatorName(properties)
 ```
-Defines a mediator property. If
+Defines a mediator property. If 
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.UI.on.add'></a>Lapiz.UI.on.add
 ```javascript
 Lapiz.UI.on.add(node, fn)
@@ -260,7 +240,6 @@ Lapiz.UI.on.add(node, fn)
 When the node is added to the document, fn will be called.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.UI.on.loaded'></a>Lapiz.UI.on.loaded
 ```javascript
 Lapiz.UI.on.loaded(fn())
@@ -268,7 +247,6 @@ Lapiz.UI.on.loaded = fn()
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.UI.on.move'></a>Lapiz.UI.on.move
 ```javascript
 Lapiz.UI.on.move(node, fn)
@@ -276,7 +254,6 @@ Lapiz.UI.on.move(node, fn)
 When the node is moved with in the document, fn will be called.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.UI.on.remove'></a>Lapiz.UI.on.remove
 ```javascript
 Lapiz.UI.on.remove(node, fn)
@@ -284,14 +261,12 @@ Lapiz.UI.on.remove(node, fn)
 When the node is removed from the document, fn will be called.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='Lapiz.UI.render'></a>Lapiz.UI.render
 ```javascript
 Lapiz.UI.render(renderString..., ctx);
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='attribute'></a>attribute
 ```javascript
 attribute
@@ -299,7 +274,6 @@ attribute
 An HTML attribute
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='attribute_l-view'></a>attribute:l-view
 ```javascript
 attribute:l-view
@@ -310,7 +284,6 @@ All nodes in the document with this attribute will be cloned and saved and
 the original will be removed from the document.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 ### <a name='tag'></a>tag
 ```javascript
 tag
@@ -318,7 +291,6 @@ tag
 An html tag
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='tag_l-view'></a>tag:l-view
 ```javascript
 tag:l-view
@@ -329,7 +301,6 @@ children will be cloned, the node itself will be ommited. The node must
 have a name attribute
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-
 #### <a name='tag_render'></a>tag:render
 ```javascript
 tag:render
