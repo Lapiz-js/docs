@@ -22,6 +22,7 @@
 * [attribute:submit](#attribute_submit)
 * [attribute:templator](#attribute_templator)
 * [attribute:view](#attribute_view)
+* [attribute:with](#attribute_with)
 * [mediator:resolver](#mediator_resolver)
 * [mediator:templator](#mediator_templator)
 
@@ -100,7 +101,7 @@ The given function will be called with the node is first displayed.
 ```javascript
 attribute:focus
 ```
-Causes this element to recieve focus when a view is rendered
+Causes this element to receive focus when a view is rendered
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 ### <a name='attribute_if'></a>attribute:if
@@ -162,7 +163,7 @@ item in the collection.
 ```
 If the collection has Lapiz event wiring (an accessor such as a Dictionary)
 the collection will automatically stay up to date with additions and
-removals. To keep thecontents up to date, also use live.
+removals. To keep the contents up to date, also use live.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 ### <a name='attribute_resolver'></a>attribute:resolver
@@ -223,6 +224,14 @@ Lapiz.UI.mediator.view("foo", function(node, ctx){
   };
 });
 ```
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+### <a name='attribute_with'></a>attribute:with
+```javascript
+attribute:with
+<tag with="$SubCtx">...</tag>
+```
+Set the render context.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 ### <a name='mediator_resolver'></a>mediator:resolver
