@@ -2,6 +2,7 @@
 
 <sub><sup>[&larr;Home](index.md)</sup></sub>
 
+* [.ModuleName](#.ModuleName)
 * [Lapiz.Filter](#Lapiz.Filter)
 * [filter](#filter)
   * [filter.Accessor](#filter.Accessor)
@@ -9,6 +10,7 @@
   * [filter.ForceRescan](#filter.ForceRescan)
   * [filter.Sort](#filter.Sort)
   * [filter._cls](#filter._cls)
+  * [filter.each](#filter.each)
   * [filter.func](#filter.func)
     * [filter.func.on.change](#filter.func.on.change)
   * [filter.has](#filter.has)
@@ -20,6 +22,12 @@
     * [filter.on.insert](#filter.on.insert)
     * [filter.on.remove](#filter.on.remove)
 
+### <a name='.ModuleName'></a>.ModuleName
+```javascript
+.ModuleName "Filter"
+```
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
 ### <a name='Lapiz.Filter'></a>Lapiz.Filter
 ```javascript
 Lapiz.Filter(accessor, filterFunc(key, accessor) )
@@ -74,6 +82,13 @@ Returns a Sorter
 filter._cls
 ```
 Return Lapiz.Filter
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+#### <a name='filter.each'></a>filter.each
+```javascript
+filter.each(fn)
+```
+Iterates over the collection and calls fn(val, key) on each member.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 #### <a name='filter.func'></a>filter.func

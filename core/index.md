@@ -8,6 +8,7 @@
 * [errors.js](errors.js.md)
 * [events.js](events.js.md)
 * [filter.js](filter.js.md)
+* [grouper.js](grouper.js.md)
 * [index.js](index.js.md)
 * [init.js](init.js.md)
 * [object.js](object.js.md)
