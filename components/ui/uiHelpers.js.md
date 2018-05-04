@@ -2,6 +2,7 @@
 
 <sub><sup>[&larr;Home](index.md)</sup></sub>
 
+* [.ModuleName](#.ModuleName)
 * [Lapiz.UI.hash](#Lapiz.UI.hash)
 * [Lapiz.UI.mediator](#Lapiz.UI.mediator)
   * [Lapiz.UI.mediator.form](#Lapiz.UI.mediator.form)
@@ -11,6 +12,7 @@
 * [attribute:click](#attribute_click)
 * [attribute:display](#attribute_display)
 * [attribute:focus](#attribute_focus)
+* [attribute:hash](#attribute_hash)
 * [attribute:if](#attribute_if)
   * [attribute:ifNot](#attribute_ifNot)
 * [attribute:isChecked](#attribute_isChecked)
@@ -26,18 +28,33 @@
 * [mediator:resolver](#mediator_resolver)
 * [mediator:templator](#mediator_templator)
 
+### <a name='.ModuleName'></a>.ModuleName
+```javascript
+.ModuleName "DefaultUIHelpers"
+```
+This module contains a set of default UI tools. It's important to note that
+this module is seperate from the UI module, so it shows the extent of what
+is possible without access to the internals of the UI mdoule. In addition to
+the documentation, the examples folder will provide a lot of guidance in
+using this module.
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
 ### <a name='Lapiz.UI.hash'></a>Lapiz.UI.hash
 ```javascript
 Lapiz.UI.hash(hash, fn, ctx)
 Lapiz.UI.hash(hash, renderString)
 ```
+Registers a hash handler. When the hash in the url changes to match the
+given hash the function will be called or the renderString will be passed
+into render. A hash will be split on "/" as "hash/arg1/arg2/...".
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 ### <a name='Lapiz.UI.mediator'></a>Lapiz.UI.mediator
 ```javascript
 Lapiz.UI.mediator
 ```
-Mediators are a way to attach generic logic to a view.
+Mediators are a way to attach generic logic to a view. See
+[more](ui.js.md#Lapiz.UI.mediator)
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 #### <a name='Lapiz.UI.mediator.form'></a>Lapiz.UI.mediator.form
@@ -61,6 +78,8 @@ formData.
 #### <a name='Lapiz.UI.mediator.viewMethod'></a>Lapiz.UI.mediator.viewMethod
 ```javascript
 Lapiz.UI.mediator.viewMethod(viewMethodName, func(node, ctx, args...))
+Lapiz.UI.mediator.viewMethod(namedFunc(node, ctx, args...))
+Lapiz.UI.mediator.viewMethod({"viewMethodName":funcs(node, ctx, args...)...})
 ```
 Useful mediator for attaching generic methods available to views.
 
@@ -102,6 +121,20 @@ The given function will be called with the node is first displayed.
 attribute:focus
 ```
 Causes this element to receive focus when a view is rendered
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+### <a name='attribute_hash'></a>attribute:hash
+```javascript
+attribute:hash
+```
+Just a shorthand for adding hash links so
+```javascript
+<a hash="foo">Foo</a>
+```
+becomes
+```javascript
+<a href="#foo">Foo</a>
+```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 ### <a name='attribute_if'></a>attribute:if
@@ -231,7 +264,9 @@ Lapiz.UI.mediator.view("foo", function(node, ctx){
 attribute:with
 <tag with="$SubCtx">...</tag>
 ```
-Set the render context.
+Set the render context. This changes the render context for the node and
+all children of the node. Can be combined with the render tag for reusable
+sub-views.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 ### <a name='mediator_resolver'></a>mediator:resolver
