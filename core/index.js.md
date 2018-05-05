@@ -2,6 +2,7 @@
 
 <sub><sup>[&larr;Home](index.md)</sup></sub>
 
+* [.ModuleName](#.ModuleName)
 * [Lapiz.Index](#Lapiz.Index)
   * [Lapiz.Index.Class](#Lapiz.Index.Class)
   * [Lapiz.Index.defaultPrimary](#Lapiz.Index.defaultPrimary)
@@ -15,6 +16,12 @@
 * [indexedClass.keys](#indexedClass.keys)
 * [indexedClass.remove](#indexedClass.remove)
 
+### <a name='.ModuleName'></a>.ModuleName
+```javascript
+.ModuleName "Index"
+```
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
 ### <a name='Lapiz.Index'></a>Lapiz.Index
 ```javascript
 Lapiz.Index(lapizClass)

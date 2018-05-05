@@ -14,7 +14,7 @@
 * [attribute:focus](#attribute_focus)
 * [attribute:hash](#attribute_hash)
 * [attribute:if](#attribute_if)
-  * [attribute:ifNot](#attribute_ifNot)
+* [attribute:ifNot](#attribute_ifNot)
 * [attribute:isChecked](#attribute_isChecked)
 * [attribute:live](#attribute_live)
 * [attribute:q](#attribute_q)
@@ -147,7 +147,7 @@ children are removed. If the attribute is a function it will be invoked
 with no arguments and the return value will be evaluated as a boolean
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-#### <a name='attribute_ifNot'></a>attribute:ifNot
+### <a name='attribute_ifNot'></a>attribute:ifNot
 ```javascript
 attribute:ifNot
 <htmlNode ifNot="$ctxVal">...</htmlNode>

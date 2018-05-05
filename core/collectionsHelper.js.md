@@ -13,7 +13,7 @@
   * [Lapiz.set.binder](#Lapiz.set.binder)
   * [Lapiz.set.copyProps](#Lapiz.set.copyProps)
   * [Lapiz.set.getter](#Lapiz.set.getter)
-    * [Lapiz.set.getterFactory](#Lapiz.set.getterFactory)
+  * [Lapiz.set.getterFactory](#Lapiz.set.getterFactory)
   * [Lapiz.set.meth](#Lapiz.set.meth)
   * [Lapiz.set.prop](#Lapiz.set.prop)
   * [Lapiz.set.setProperties](#Lapiz.set.setProperties)
@@ -26,13 +26,13 @@
   * [Lapiz.set.setterGetter](#Lapiz.set.setterGetter)
   * [Lapiz.set.setterMethod](#Lapiz.set.setterMethod)
 * [namespace](#namespace)
-  * [namespace](#namespace)
-    * [namespace.attr](#namespace.attr)
-    * [namespace.meth](#namespace.meth)
-    * [namespace.namespace](#namespace.namespace)
-    * [namespace.properties](#namespace.properties)
-    * [namespace.set](#namespace.set)
-      * [namespace.setterMethod](#namespace.setterMethod)
+* [namespace](#namespace)
+  * [namespace.attr](#namespace.attr)
+  * [namespace.meth](#namespace.meth)
+  * [namespace.namespace](#namespace.namespace)
+  * [namespace.properties](#namespace.properties)
+  * [namespace.set](#namespace.set)
+  * [namespace.setterMethod](#namespace.setterMethod)
 
 ### <a name='Lapiz.ArrayConverter'></a>Lapiz.ArrayConverter
 ```javascript
@@ -203,7 +203,7 @@ console.log(x.foo); //1
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-##### <a name='Lapiz.set.getterFactory'></a>Lapiz.set.getterFactory
+#### <a name='Lapiz.set.getterFactory'></a>Lapiz.set.getterFactory
 ```javascript
 Lapiz.set.getterFactory(attr, property)
 Lapiz.set.getterFactory(attr, func)
@@ -392,7 +392,7 @@ Returns a namespace. If a constructor is given, the inner namespace is
 returned, otherwise the namespace wrapper is returned.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-#### <a name='namespace'></a>namespace
+### <a name='namespace'></a>namespace
 ```javascript
 namespace
 ```
@@ -407,21 +407,21 @@ var foo = Lapiz.Namespace(function(){
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-##### <a name='namespace.attr'></a>namespace.attr
+#### <a name='namespace.attr'></a>namespace.attr
 ```javascript
 namespace.attr
 ```
 This is where the attributes for properties are stored.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-##### <a name='namespace.meth'></a>namespace.meth
+#### <a name='namespace.meth'></a>namespace.meth
 ```javascript
 namespace.meth(namedFn)
 namespace.meth(name, fn)
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-##### <a name='namespace.namespace'></a>namespace.namespace
+#### <a name='namespace.namespace'></a>namespace.namespace
 ```javascript
 namespace.namespace
 ```
@@ -429,20 +429,20 @@ The inner namespace is where all methods and properties are attached, the
 outer wrapper holds the tools for attaching these.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-##### <a name='namespace.properties'></a>namespace.properties
+#### <a name='namespace.properties'></a>namespace.properties
 ```javascript
 namespace.properties(props, vals)
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-##### <a name='namespace.set'></a>namespace.set
+#### <a name='namespace.set'></a>namespace.set
 ```javascript
 namespace.set(name, val)
 ```
 Sets the value as a property on the namespace.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-###### <a name='namespace.setterMethod'></a>namespace.setterMethod
+#### <a name='namespace.setterMethod'></a>namespace.setterMethod
 ```javascript
 namespace.setterMethod(namedFn)
 namespace.setterMethod(name, fn)

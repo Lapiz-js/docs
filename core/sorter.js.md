@@ -2,6 +2,7 @@
 
 <sub><sup>[&larr;Home](index.md)</sup></sub>
 
+* [.ModuleName](#.ModuleName)
 * [Lapiz.Sort](#Lapiz.Sort)
   * [Lapiz.Sort.gt](#Lapiz.Sort.gt)
   * [Lapiz.Sort.locationOf](#Lapiz.Sort.locationOf)
@@ -22,6 +23,12 @@
 * [sortFunction](#sortFunction)
   * [sortFunction.range](#sortFunction.range)
 
+### <a name='.ModuleName'></a>.ModuleName
+```javascript
+.ModuleName "Sorter"
+```
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
 ### <a name='Lapiz.Sort'></a>Lapiz.Sort
 ```javascript
 Lapiz.Sort(accessor, sorterFunc(keyA, keyB, accessor))

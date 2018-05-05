@@ -10,13 +10,13 @@
   * [Lapiz.UI.appendChild](#Lapiz.UI.appendChild)
   * [Lapiz.UI.attribute](#Lapiz.UI.attribute)
   * [Lapiz.UI.bind](#Lapiz.UI.bind)
-    * [Lapiz.UI.bindState](#Lapiz.UI.bindState)
-      * [Lapiz.UI.bindState.after](#Lapiz.UI.bindState.after)
-      * [Lapiz.UI.bindState.ctx](#Lapiz.UI.bindState.ctx)
-      * [Lapiz.UI.bindState.firstPass](#Lapiz.UI.bindState.firstPass)
-      * [Lapiz.UI.bindState.parent](#Lapiz.UI.bindState.parent)
-      * [Lapiz.UI.bindState.proceed](#Lapiz.UI.bindState.proceed)
-      * [Lapiz.UI.bindState.templator](#Lapiz.UI.bindState.templator)
+  * [Lapiz.UI.bindState](#Lapiz.UI.bindState)
+    * [Lapiz.UI.bindState.after](#Lapiz.UI.bindState.after)
+    * [Lapiz.UI.bindState.ctx](#Lapiz.UI.bindState.ctx)
+    * [Lapiz.UI.bindState.firstPass](#Lapiz.UI.bindState.firstPass)
+    * [Lapiz.UI.bindState.parent](#Lapiz.UI.bindState.parent)
+    * [Lapiz.UI.bindState.proceed](#Lapiz.UI.bindState.proceed)
+    * [Lapiz.UI.bindState.templator](#Lapiz.UI.bindState.templator)
   * [Lapiz.UI.empty](#Lapiz.UI.empty)
   * [Lapiz.UI.getStyle](#Lapiz.UI.getStyle)
   * [Lapiz.UI.id](#Lapiz.UI.id)
@@ -100,7 +100,7 @@ it will use the standard templator Generally, it is better to call
 Lapiz.UI.render than Lapiz.UI.bind.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-##### <a name='Lapiz.UI.bindState'></a>Lapiz.UI.bindState
+#### <a name='Lapiz.UI.bindState'></a>Lapiz.UI.bindState
 ```javascript
 Lapiz.UI.bindState
 ```
@@ -109,7 +109,7 @@ available to the attributes during the binding process so they can direct
 aspects of the bind process.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-###### <a name='Lapiz.UI.bindState.after'></a>Lapiz.UI.bindState.after
+##### <a name='Lapiz.UI.bindState.after'></a>Lapiz.UI.bindState.after
 ```javascript
 Lapiz.UI.bindState.after(fn);
 ```
@@ -117,7 +117,7 @@ Adds a function that will be called after all attributes and child nodes
 have been handled.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-###### <a name='Lapiz.UI.bindState.ctx'></a>Lapiz.UI.bindState.ctx
+##### <a name='Lapiz.UI.bindState.ctx'></a>Lapiz.UI.bindState.ctx
 ```javascript
 Lapiz.UI.bindState.ctx
 ```
@@ -125,7 +125,7 @@ Initially, this is set to the ctx that is resolved for the binding
 operationg. If it is changed by attribute, that will become the context
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-###### <a name='Lapiz.UI.bindState.firstPass'></a>Lapiz.UI.bindState.firstPass
+##### <a name='Lapiz.UI.bindState.firstPass'></a>Lapiz.UI.bindState.firstPass
 ```javascript
 Lapiz.UI.bindState.firstPass
 ```
@@ -134,14 +134,14 @@ for various update operations. This property will indicate if this is the
 first pass binding.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-###### <a name='Lapiz.UI.bindState.parent'></a>Lapiz.UI.bindState.parent
+##### <a name='Lapiz.UI.bindState.parent'></a>Lapiz.UI.bindState.parent
 ```javascript
 Lapiz.UI.bindState.parent
 ```
 The bindstate of the parent node.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-###### <a name='Lapiz.UI.bindState.proceed'></a>Lapiz.UI.bindState.proceed
+##### <a name='Lapiz.UI.bindState.proceed'></a>Lapiz.UI.bindState.proceed
 ```javascript
 Lapiz.UI.bindState.proceed
 ```
@@ -150,7 +150,7 @@ and the child nodes will not be processed. This is useful if an attribute
 is removing a node.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-###### <a name='Lapiz.UI.bindState.templator'></a>Lapiz.UI.bindState.templator
+##### <a name='Lapiz.UI.bindState.templator'></a>Lapiz.UI.bindState.templator
 ```javascript
 Lapiz.UI.bindState.templator
 ```

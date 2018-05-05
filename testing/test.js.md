@@ -25,7 +25,7 @@
 * [TestObject](#TestObject)
   * [TestObject.error](#TestObject.error)
   * [TestObject.fail](#TestObject.fail)
-    * [TestObject.failed](#TestObject.failed)
+  * [TestObject.failed](#TestObject.failed)
   * [TestObject.log](#TestObject.log)
   * [TestObject.passed](#TestObject.passed)
 
@@ -206,7 +206,7 @@ TestObject.fail()
 Causes the test to fail.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-##### <a name='TestObject.failed'></a>TestObject.failed
+#### <a name='TestObject.failed'></a>TestObject.failed
 ```javascript
 TestObject.failed()
 ```

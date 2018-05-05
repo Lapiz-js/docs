@@ -2,6 +2,7 @@
 
 <sub><sup>[&larr;Home](index.md)</sup></sub>
 
+* [.ModuleName](#.ModuleName)
 * [Lapiz.Cls](#Lapiz.Cls)
 * [Lapiz.on.Cls](#Lapiz.on.Cls)
 * [classDef](#classDef)
@@ -23,6 +24,12 @@
       * [obj.pub.on.remove](#obj.pub.on.remove)
   * [obj.setMany](#obj.setMany)
 
+### <a name='.ModuleName'></a>.ModuleName
+```javascript
+.ModuleName "Obj"
+```
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
 ### <a name='Lapiz.Cls'></a>Lapiz.Cls
 ```javascript
 Lapiz.Cls( fn(classDef) )

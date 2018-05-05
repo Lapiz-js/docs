@@ -2,6 +2,7 @@
 
 <sub><sup>[&larr;Home](index.md)</sup></sub>
 
+* [.ModuleName](#.ModuleName)
 * [Lapiz.Event](#Lapiz.Event)
   * [Lapiz.Event.linkProperty](#Lapiz.Event.linkProperty)
 * [Lapiz.SingleEvent](#Lapiz.SingleEvent)
@@ -15,6 +16,12 @@
 * [singleEvent.register](#singleEvent.register)
   * [singleEvent.register.deregister](#singleEvent.register.deregister)
 
+### <a name='.ModuleName'></a>.ModuleName
+```javascript
+.ModuleName "Events"
+```
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
 ### <a name='Lapiz.Event'></a>Lapiz.Event
 ```javascript
 Lapiz.Event()

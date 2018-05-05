@@ -2,6 +2,7 @@
 
 <sub><sup>[&larr;Home](index.md)</sup></sub>
 
+* [.ModuleName](#.ModuleName)
 * [Lapiz.Dependency](#Lapiz.Dependency)
   * [Lapiz.Dependency.Factory](#Lapiz.Dependency.Factory)
   * [Lapiz.Dependency.Reference](#Lapiz.Dependency.Reference)
@@ -9,6 +10,12 @@
   * [Lapiz.Dependency.has](#Lapiz.Dependency.has)
   * [Lapiz.Dependency.remove](#Lapiz.Dependency.remove)
 
+### <a name='.ModuleName'></a>.ModuleName
+```javascript
+.ModuleName "Dependency"
+```
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
 ### <a name='Lapiz.Dependency'></a>Lapiz.Dependency
 ```javascript
 Lapiz.Dependency(name)

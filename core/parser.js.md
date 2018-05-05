@@ -2,6 +2,7 @@
 
 <sub><sup>[&larr;Home](index.md)</sup></sub>
 
+* [.ModuleName](#.ModuleName)
 * [Lapiz.parse](#Lapiz.parse)
   * [Lapiz.parse.array](#Lapiz.parse.array)
   * [Lapiz.parse.bool](#Lapiz.parse.bool)
@@ -10,6 +11,12 @@
   * [Lapiz.parse.strictBool](#Lapiz.parse.strictBool)
   * [Lapiz.parse.string](#Lapiz.parse.string)
 
+### <a name='.ModuleName'></a>.ModuleName
+```javascript
+.ModuleName "Parser"
+```
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
 ### <a name='Lapiz.parse'></a>Lapiz.parse
 ```javascript
 Lapiz.parse()

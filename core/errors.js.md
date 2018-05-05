@@ -2,11 +2,18 @@
 
 <sub><sup>[&larr;Home](index.md)</sup></sub>
 
+* [.ModuleName](#.ModuleName)
 * [Lapiz.Err](#Lapiz.Err)
   * [Lapiz.Err.logTo](#Lapiz.Err.logTo)
   * [Lapiz.Err.toss](#Lapiz.Err.toss)
 * [Lapiz.on.error](#Lapiz.on.error)
 
+### <a name='.ModuleName'></a>.ModuleName
+```javascript
+.ModuleName "Errors"
+```
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
 ### <a name='Lapiz.Err'></a>Lapiz.Err
 ```javascript
 Lapiz.Err

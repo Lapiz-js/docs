@@ -2,6 +2,7 @@
 
 <sub><sup>[&larr;Home](index.md)</sup></sub>
 
+* [.ModuleName](#.ModuleName)
 * [Lapiz.Dictionary](#Lapiz.Dictionary)
 * [dict](#dict)
   * [dict.Accessor](#dict.Accessor)
@@ -18,6 +19,12 @@
     * [dict.on.remove](#dict.on.remove)
   * [dict.remove](#dict.remove)
 
+### <a name='.ModuleName'></a>.ModuleName
+```javascript
+.ModuleName "Dictionary"
+```
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
 ### <a name='Lapiz.Dictionary'></a>Lapiz.Dictionary
 ```javascript
 Lapiz.Dictionary()
@@ -59,7 +66,7 @@ val is returned when dict is called as a setter.
 dict.Accessor
 dict.Accessor(key)
 ```
-The accessor is a read-only iterface to the dictionary
+The accessor is a read-only interface to the dictionary
 
 * accessor.length
 * accessor.keys
