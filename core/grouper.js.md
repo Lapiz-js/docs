@@ -11,6 +11,7 @@
   * [group.Add](#group.Add)
   * [group.Change](#group.Change)
   * [group.Filter](#group.Filter)
+  * [group.GroupBy](#group.GroupBy)
   * [group.Remove](#group.Remove)
   * [group.Sort](#group.Sort)
   * [group._cls](#group._cls)
@@ -124,6 +125,14 @@ group.Filter(filterFunction)
 group.Filter(field, val)
 ```
 Returns a filter.
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+#### <a name='group.GroupBy'></a>group.GroupBy
+```javascript
+group.GroupBy(attribute)
+group.GroupBy(groupByFunction)
+```
+Returns a GroupBy with the group as the accessor
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 #### <a name='group.Remove'></a>group.Remove

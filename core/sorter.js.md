@@ -8,6 +8,7 @@
   * [Lapiz.Sort.locationOf](#Lapiz.Sort.locationOf)
 * [sort.Accessor](#sort.Accessor)
 * [sort.Filter](#sort.Filter)
+* [sort.GroupBy](#sort.GroupBy)
 * [sort.Range](#sort.Range)
 * [sort.Sort](#sort.Sort)
 * [sort.each](#sort.each)
@@ -68,6 +69,7 @@ key that is greater than or equal to val in the accessor.
 ```javascript
 sort.Accessor
 ```
+Returns the underlying accessor.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 ### <a name='sort.Filter'></a>sort.Filter
@@ -79,6 +81,17 @@ It is possible to create a filter on a sorter, but it is not recommended.
 The sorting operations do not stack so this just passes the events
 through unnecessary layers of events. Better to create a filter on the
 sorters accessor.
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+### <a name='sort.GroupBy'></a>sort.GroupBy
+```javascript
+sort.GroupBy(accessor, filterFunc(key, accessor) )
+sort.GroupBy(accessor, field, val)
+```
+It is possible to create a GroupBy on a sorter, but it is not
+recommended. The sorting operations do not stack so this just passes the
+events through unnecessary layers of events. Better to create a GroupBy
+on the sorters accessor.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 ### <a name='sort.Range'></a>sort.Range
@@ -123,6 +136,7 @@ Assign a new function or field to sort by;
 ```javascript
 sort.has(key)
 ```
+On sort, the has method just passes through to the underlying accessor.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 ### <a name='sort.keys'></a>sort.keys

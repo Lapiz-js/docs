@@ -8,6 +8,7 @@
   * [filter.Accessor](#filter.Accessor)
   * [filter.Filter](#filter.Filter)
   * [filter.ForceRescan](#filter.ForceRescan)
+  * [filter.GroupBy](#filter.GroupBy)
   * [filter.Sort](#filter.Sort)
   * [filter._cls](#filter._cls)
   * [filter.each](#filter.each)
@@ -50,8 +51,20 @@ Returns the value associated with key, if it exists in the filter
 #### <a name='filter.Accessor'></a>filter.Accessor
 ```javascript
 filter.Accessor
+filter.Accessor(key)
 ```
-Returns a reference to self
+The accessor is a read-only interface to the filter
+
+* accessor.length
+* accessor.keys
+* accessor.has(key)
+* accessor.each(fn(val, key))
+* accessor.on.insert
+* accessor.on.change
+* accessor.on.remove
+* accessor.Sort
+* accessor.Filter
+* accessor.GroupBy
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 #### <a name='filter.Filter'></a>filter.Filter
@@ -67,6 +80,14 @@ Returns a filter.
 filter.ForceRescan()
 ```
 Rescans all values from parent access and fires insert and remove events
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+#### <a name='filter.GroupBy'></a>filter.GroupBy
+```javascript
+filter.GroupBy(attribute)
+filter.GroupBy(groupByFunction)
+```
+Returns a GroupBy with the filter as the accessor
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 #### <a name='filter.Sort'></a>filter.Sort

@@ -7,6 +7,7 @@
 * [dict](#dict)
   * [dict.Accessor](#dict.Accessor)
   * [dict.Filter](#dict.Filter)
+  * [dict.GroupBy](#dict.GroupBy)
   * [dict.Sort](#dict.Sort)
   * [dict._cls](#dict._cls)
   * [dict.each](#dict.each)
@@ -77,22 +78,31 @@ The accessor is a read-only interface to the dictionary
 * accessor.on.remove
 * accessor.Sort
 * accessor.Filter
+* accessor.GroupBy
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 #### <a name='dict.Filter'></a>dict.Filter
 ```javascript
 dict.Filter(filterFunction)
-dict.Filter(attribute, val)
+dict.Filter(field, val)
 ```
-Returns a Filter with the dictionary as the accessor
+Returns a dict.
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+#### <a name='dict.GroupBy'></a>dict.GroupBy
+```javascript
+dict.GroupBy(attribute)
+dict.GroupBy(groupByFunction)
+```
+Returns a GroupBy with the dict as the accessor
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 #### <a name='dict.Sort'></a>dict.Sort
 ```javascript
 dict.Sort(sorterFunction)
-dict.Sort(attribute)
+dict.Sort(fieldName)
 ```
-Returns a Sorter with the dictionary as the accessor
+Returns a Sorter
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 #### <a name='dict._cls'></a>dict._cls
