@@ -72,7 +72,12 @@ Lapiz.UI.mediator.form("formHandler", fn(formData, formNode, ctx));
 ```
 The form mediator will search up the node tree until it finds
 a form node. All elements with a name will be added to the
-formData.
+formData. If more than one element has the same name, the value will be
+returned as a list.
+
+Checkboxes and radio buttons will return a boolean by default indicating
+if they are checked. But if they have a value attribute, they will use that
+and only include the value if they are checked.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 #### <a name='Lapiz.UI.mediator.viewMethod'></a>Lapiz.UI.mediator.viewMethod
