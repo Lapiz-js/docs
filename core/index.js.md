@@ -7,6 +7,7 @@
   * [Lapiz.Index.Class](#Lapiz.Index.Class)
   * [Lapiz.Index.defaultPrimary](#Lapiz.Index.defaultPrimary)
 * [indexedClass.Filter](#indexedClass.Filter)
+* [indexedClass.GroupBy](#indexedClass.GroupBy)
 * [indexedClass.Sort](#indexedClass.Sort)
 * [indexedClass.all](#indexedClass.all)
 * [indexedClass.each](#indexedClass.each)
@@ -65,6 +66,13 @@ Sets the default primary key name. It defaults to "id".
 ```javascript
 indexedClass.Filter(filterFunc)
 indexedClass.Filter(filterField, val)
+```
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+### <a name='indexedClass.GroupBy'></a>indexedClass.GroupBy
+```javascript
+indexedClass.GroupBy(accessor, field)
+indexedClass.GroupBy(accessor, groupKeyFn(key, accessor) )
 ```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>

@@ -8,9 +8,9 @@
 * [Lapiz.SingleEvent](#Lapiz.SingleEvent)
 * [event.fire](#event.fire)
   * [event.fire.enabled](#event.fire.enabled)
-  * [event.fire.length](#event.fire.length)
 * [event.register](#event.register)
   * [event.register.deregister](#event.register.deregister)
+  * [event.register.length](#event.register.length)
 * [singleEvent.fire](#singleEvent.fire)
   * [singleEvent.fire.enabled](#singleEvent.fire.enabled)
 * [singleEvent.register](#singleEvent.register)
@@ -89,14 +89,6 @@ fire method. If event.fire.enable is false, even if event.fire is called,
 it will not call the registered functions.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
-#### <a name='event.fire.length'></a>event.fire.length
-```javascript
-event.fire.length
-```
-The event.length is a read-only property that returns the number of
-functions registered with the event.
-
-<sub><sup>[&uarr;Top](#__top)</sup></sub>
 ### <a name='event.register'></a>event.register
 ```javascript
 event.register(fn)
@@ -113,6 +105,14 @@ event.register.deregister = fn
 ```
 The event.register.deregister method takes a function. If that function
 has been registered with the event, it will be removed.
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+#### <a name='event.register.length'></a>event.register.length
+```javascript
+event.register.length
+```
+The event.register.length is a read-only property that returns the number
+of listeners registered with the event.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 ### <a name='singleEvent.fire'></a>singleEvent.fire
