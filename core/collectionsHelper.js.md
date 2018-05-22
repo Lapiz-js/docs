@@ -26,8 +26,8 @@
   * [Lapiz.set.setterGetter](#Lapiz.set.setterGetter)
   * [Lapiz.set.setterMethod](#Lapiz.set.setterMethod)
 * [namespace](#namespace)
-* [namespace](#namespace)
   * [namespace.attr](#namespace.attr)
+  * [namespace.getter](#namespace.getter)
   * [namespace.meth](#namespace.meth)
   * [namespace.namespace](#namespace.namespace)
   * [namespace.properties](#namespace.properties)
@@ -390,12 +390,6 @@ namespace = Lapiz.Namespace(constructor)
 ```
 Returns a namespace. If a constructor is given, the inner namespace is
 returned, otherwise the namespace wrapper is returned.
-
-<sub><sup>[&uarr;Top](#__top)</sup></sub>
-### <a name='namespace'></a>namespace
-```javascript
-namespace
-```
 The "this" object on a Namespace constructor.
 ```javascript
 var foo = Lapiz.Namespace(function(){
@@ -412,6 +406,15 @@ var foo = Lapiz.Namespace(function(){
 namespace.attr
 ```
 This is where the attributes for properties are stored.
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+#### <a name='namespace.getter'></a>namespace.getter
+```javascript
+namespace.getter(namedGetterFunc() )
+namespace.getter(name, getterFunc() )
+namespace.getter([namedGetterFuncs...] )
+namespace.getter({name: getterFunc...} )
+```
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 #### <a name='namespace.meth'></a>namespace.meth

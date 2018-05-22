@@ -6,6 +6,7 @@
 * [Lapiz.UI](#Lapiz.UI)
   * [Lapiz.UI.Children](#Lapiz.UI.Children)
   * [Lapiz.UI.CloneView](#Lapiz.UI.CloneView)
+  * [Lapiz.UI.Parse](#Lapiz.UI.Parse)
   * [Lapiz.UI.View](#Lapiz.UI.View)
   * [Lapiz.UI.appendChild](#Lapiz.UI.appendChild)
   * [Lapiz.UI.attribute](#Lapiz.UI.attribute)
@@ -18,6 +19,7 @@
     * [Lapiz.UI.bindState.proceed](#Lapiz.UI.bindState.proceed)
     * [Lapiz.UI.bindState.templator](#Lapiz.UI.bindState.templator)
   * [Lapiz.UI.empty](#Lapiz.UI.empty)
+  * [Lapiz.UI.fragment](#Lapiz.UI.fragment)
   * [Lapiz.UI.getStyle](#Lapiz.UI.getStyle)
   * [Lapiz.UI.id](#Lapiz.UI.id)
   * [Lapiz.UI.insertAfter](#Lapiz.UI.insertAfter)
@@ -65,6 +67,13 @@ fragment. If a selectorStr is used, it will be run against document.
 Lapiz.UI.CloneView(name)
 ```
 Returns an html Node that is a clone of the View.
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+#### <a name='Lapiz.UI.Parse'></a>Lapiz.UI.Parse
+```javascript
+Lapiz.UI.Parse(htmlString)
+```
+Returns a document fragment contining the html.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 #### <a name='Lapiz.UI.View'></a>Lapiz.UI.View
@@ -167,6 +176,15 @@ The templator that will be used
 Lapiz.UI.empty(node)
 Lapiz.UI.empty(nodeId)
 ```
+Removes the contents of a node.
+
+<sub><sup>[&uarr;Top](#__top)</sup></sub>
+#### <a name='Lapiz.UI.fragment'></a>Lapiz.UI.fragment
+```javascript
+Lapiz.UI.fragment()
+```
+Returns an instance of the UI module that operates on a document fragment.
+Mostly intended for unit testing.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 #### <a name='Lapiz.UI.getStyle'></a>Lapiz.UI.getStyle
