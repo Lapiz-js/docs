@@ -41,12 +41,17 @@ using this module.
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 ### <a name='Lapiz.UI.hash'></a>Lapiz.UI.hash
 ```javascript
-Lapiz.UI.hash(hash, fn, ctx)
-Lapiz.UI.hash(hash, renderString)
+Lapiz.UI.hash(hash, fn)
+Lapiz.UI.hash(namedFn)
+Lapiz.UI.hash(hash, renderArgs...)
+Lapiz.UI.hash([argSet...])
 ```
 Registers a hash handler. When the hash in the url changes to match the
 given hash the function will be called or the renderString will be passed
 into render. A hash will be split on "/" as "hash/arg1/arg2/...".
+
+When passing in an array, each element should either be a named function
+or an array of arguments.
 
 <sub><sup>[&uarr;Top](#__top)</sup></sub>
 ### <a name='Lapiz.UI.mediator'></a>Lapiz.UI.mediator
